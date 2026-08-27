@@ -1,0 +1,29 @@
+// Paper Fig. 4 - Circuit with Implication G4(=0) => G3(=0)
+// Expected VP markings: G4=P0, e=P1, f=P1, G7=P0, G6=P1, G8=P1, G9=NP0, G1=P1, G2=P1, G3=P0
+// Expected PathG: {G6, G8, G1, G2, G3}
+// Expected gain: 0.796
+// Masking gate: G10 (AND), FRW added to masking gate (AND gets extra input G4)
+//
+// Detection probs before: {G6sa0=0.281, G8sa0=0.563, G1sa0=0.781, G2sa0=0.781, G3sa1=0.781}
+// Detection probs after:  {G6sa0=0.211, G8sa0=0.422, G1sa0=0.586, G2sa0=0.586, G3sa1=0.586}
+
+module fig4 (a, c, d, e, f, h, O1);
+
+input a, c, d, e, f, h;
+
+output O1;
+
+wire G1, G2, G3, G4, G5, G6, G7, G8, G9;
+
+or G1_gate   (G1, a, G8);
+or G2_gate   (G2, c, G8);
+nand G3_gate (G3, G1, G2);
+nand G4_gate (G4, e, f);
+not G5_gate   (G5, h);
+or G6_gate  (G6, e, d);
+and G7_gate  (G7, G4, G5);
+or G8_gate   (G8, G6, G7);
+or G9_gate  (G9, h, G7);
+and G10_gate (O1, G3, G9);
+
+endmodule

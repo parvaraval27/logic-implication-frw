@@ -1,0 +1,30 @@
+// Paper Fig. 5 - Circuit with Implication h(=0) => G3(=0)
+// Same topology as Fig. 4, different implication
+// Expected VP markings: h=P0, G5=P1, G9=NP0->NP1, G7=NP1, G8=NP1, G1=NP1, G2=NP1, G3=NP0
+// Expected PathG: {G5, G7, G8, G1, G2, G3}
+// Expected gain: 1.452
+// Masking gate: G10, FRW adds inverted h to G10
+//
+// Detection probs before: {G5sa0=0, G7sa0=0, G8sa0=0.563, G1sa0=0.781, G2sa0=0.781, G3sa1=0.781}
+// Detection probs after:  {G5sa0=0, G7sa0=0, G8sa0=0.281, G1sa0=0.391, G2sa0=0.391, G3sa1=0.391}
+
+module fig5 (a, b, c, d, e, f, g, h, O1);
+
+input a, b, c, d, e, f, g, h;
+
+output O1;
+
+wire G1, G2, G3, G4, G5, G6, G7, G8, G9;
+
+or G1_gate   (G1, a, G8);
+or G2_gate   (G2, c, G8);
+nand G3_gate (G3, G1, G2);
+nand G4_gate (G4, e, f);
+not G5_gate  (G5, h);
+or G6_gate  (G6, e, d);
+and G7_gate  (G7, G4, G5);
+or G8_gate   (G8, G6, G7);
+or G9_gate  (G9, h, G7);
+and G10_gate (O1, G3, G9);
+
+endmodule

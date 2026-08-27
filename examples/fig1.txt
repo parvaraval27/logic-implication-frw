@@ -1,0 +1,25 @@
+// Paper Fig. 1 - Example circuit
+// Implications: e(=1) => G8(=0), b(=1) => G8(=0), h(=0) => G8(=0)
+// Gates: G1-G10, Inputs: a-h, Outputs: O1
+
+module fig1 (a, b, c, d, e, f, g, h, O1);
+
+input a, b, c, d, e, f, g, h;
+
+output O1;
+
+wire G1, G2, G3, G4, G5, G6, G7, G8, G9, X;
+
+or G1_gate (G1, a, b);
+or G2_gate (G2, c, b);
+or G3_gate (G3, e, d);
+nand G4_gate (G4, e, f);
+not G5_gate  (G5, h);
+and G6_gate (G6, G1, G2);
+and G7_gate  (G7, G4, G5);
+nor G8_gate1 (X, G3, G7);
+nor G8_gate2 (G8, X, G6);
+or G9_gate  (G9, h, G7);
+and G10_gate (O1, G8, G9);
+
+endmodule
