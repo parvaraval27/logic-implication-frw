@@ -1,6 +1,9 @@
 """
 Five-valued logic engine for D/D̄ fault-effect propagation.
 
+Ported from vlsi-testing-atpg/podem.py — PODEM search logic stripped out,
+keeping only the 5-valued gate evaluator and fault injection primitives.
+
 Values: '0', '1', 'D' (good=1, faulty=0), 'D_bar' (good=0, faulty=1), 'X'
 """
 
@@ -114,6 +117,13 @@ def eval_binary_gate(gate_type, vals):
 
 
 def eval_gate_5val(node, active_fault=None):
+    """
+    Evaluate a gate using 5-valued logic (D/D̄ propagation).
+
+    Splits each input into (good, faulty) pairs, evaluates each half
+    independently, then recombines. If the node is the fault site,
+    injects the stuck-at value on the faulty half.
+    """
     vals = [inp.value for inp in node.fanins]
     if not vals and node.role == 'CONST':
         return node.value
@@ -140,7 +150,10 @@ def eval_gate_5val(node, active_fault=None):
 
 
 def simulate_5val(circuit, active_fault=None):
-
+    """
+    Level-order 5-valued simulation of the entire circuit.
+    If active_fault is provided, injects the fault at the fault site.
+    """
     nodes_sorted = sorted(circuit.nodes.values(),
                           key=lambda n: n.level if n.level >= 0 else 999999)
     for node in nodes_sorted:
@@ -152,4 +165,5 @@ def simulate_5val(circuit, active_fault=None):
 
 
 def has_fault_at_po(circuit):
+    """Check if any primary output has a D or D̄ value (fault detected)."""
     return any(po.value in ('D', 'D_bar') for po in circuit.POs)

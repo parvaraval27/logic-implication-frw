@@ -1,0 +1,60 @@
+.logic-gate-node {
+  padding: 10px 16px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: all 0.2s ease;
+  min-width: 90px;
+  text-align: center;
+  position: relative;
+}
+
+.logic-gate-node:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+  border-color: #9ca3af;
+}
+
+.gate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.gate-name {
+  font-weight: 700;
+  font-size: 14px;
+  color: #111;
+}
+
+.gate-type {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Distinctive colored tags for different logic gates */
+.gate-and .gate-type, .gate-nand .gate-type { background: #fee2e2; color: #991b1b; } /* Red */
+.gate-or .gate-type, .gate-nor .gate-type { background: #e0e7ff; color: #3730a3; } /* Blue */
+.gate-not .gate-type, .gate-inv .gate-type { background: #dcfce7; color: #166534; } /* Green */
+.gate-xor .gate-type, .gate-xnor .gate-type { background: #fef3c7; color: #92400e; } /* Yellow */
+.gate-buf .gate-type { background: #f3f4f6; color: #374151; } /* Gray */
+
+.gate-stats {
+  margin-top: 8px;
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  background: #f9fafb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #f3f4f6;
+  color: #4b5563;
+}

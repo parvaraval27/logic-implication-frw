@@ -1,9 +1,21 @@
+"""
+Circuit model: Node, Circuit, Fault, parsing, levelization, simulation.
+
+Ported from vlsi-testing-atpg/netlist_graph.py with extensions:
+  - Node extended with P0/P1, Pdet_sa0/Pdet_sa1, marking attributes
+  - Logic cone computation
+  - DAG path counting for PRP (Eq. 2)
+  - Circuit cloning for FRW mutation
+"""
+
 import os
 import copy
 from collections import deque
 
 
- #data classes for circuit representation
+# --------------------------------------------------------------------------- #
+#  Data classes
+# --------------------------------------------------------------------------- #
 
 class Node:
     def __init__(self, name, gate_type):
@@ -15,7 +27,7 @@ class Node:
         self.value = 'X'             # 0, 1, X  (3-valued simulation)
         self.level = -1
 
-    
+        # --- Extensions for the paper ---
         self.P0 = 0.0                # probability of output value 0
         self.P1 = 0.0                # probability of output value 1
         self.Pdet_sa0 = 0.0          # stuck-at-0 fault detection probability
@@ -58,8 +70,8 @@ class Implication:
     def __init__(self, source, u, target, v):
         self.source = source    # Node
         self.u = u              # '0' or '1'
-        self.target = target    
-        self.v = v              
+        self.target = target    # Node
+        self.v = v              # '0' or '1'
         self.path_gates = []    # list[Node] (PathG from Algorithm 5)
         self.gain = 0.0
 
@@ -67,7 +79,9 @@ class Implication:
         return f"Impl({self.source.name}={self.u} => {self.target.name}={self.v}, gain={self.gain:.4f})"
 
 
-#parsing and levelization
+# --------------------------------------------------------------------------- #
+#  Parsing  (ported from vlsi-testing-atpg)
+# --------------------------------------------------------------------------- #
 
 def get_or_create_node(circuit, name, gate_type="WIRE"):
     if name not in circuit.nodes:
@@ -161,7 +175,11 @@ def parse_netlist(filename):
                         in_node.fanouts.append(node)
 
     return circuit
-#levelization 
+
+
+# --------------------------------------------------------------------------- #
+#  Levelization  (ported from vlsi-testing-atpg)
+# --------------------------------------------------------------------------- #
 
 def levelize(circuit):
     """Assign topological levels to all nodes (BFS from PIs/CONSTs)."""
@@ -185,7 +203,11 @@ def levelize(circuit):
                     out.level = candidate_level
                     queue.append(out)
 
-#gate evaluation
+
+# --------------------------------------------------------------------------- #
+#  Gate evaluation  (ported from vlsi-testing-atpg)
+# --------------------------------------------------------------------------- #
+
 def _eval_and(vals):
     if '0' in vals:
         return '0'
@@ -295,7 +317,9 @@ def simulate_event_driven(circuit, changed_inputs=None):
                 schedule(fanout_gate)
 
 
-#  Fault generation  
+# --------------------------------------------------------------------------- #
+#  Fault generation  (ported from vlsi-testing-atpg)
+# --------------------------------------------------------------------------- #
 
 def generate_faults(circuit):
     """Generate all single stuck-at faults for every node."""
@@ -304,6 +328,11 @@ def generate_faults(circuit):
         faults.append(Fault(node, 0))
         faults.append(Fault(node, 1))
     return faults
+
+
+# --------------------------------------------------------------------------- #
+#  Extensions for the paper
+# --------------------------------------------------------------------------- #
 
 def compute_logic_cone(circuit, root):
     """

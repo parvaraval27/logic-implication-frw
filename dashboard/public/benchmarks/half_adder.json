@@ -1,0 +1,120 @@
+{
+  "metrics": {
+    "baseline": {
+      "pi_count": 2,
+      "po_count": 2,
+      "gate_count": 2,
+      "area": 2990.0,
+      "avg_pdet": 0
+    },
+    "post_frw": {
+      "pi_count": 2,
+      "po_count": 2,
+      "gate_count": 2,
+      "frw_added": 0,
+      "area": 2990.0,
+      "area_overhead": 0.0,
+      "avg_pdet": 0
+    }
+  },
+  "nodes": [
+    {
+      "id": "b",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5700000000000001,
+        "P1": 0.43
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5700000000000001,
+        "P1": 0.43
+      }
+    },
+    {
+      "id": "sum",
+      "type": "XOR",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.48,
+        "Pdet_sa1": 0.52,
+        "P0": 0.52,
+        "P1": 0.48
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.48,
+        "Pdet_sa1": 0.52,
+        "P0": 0.52,
+        "P1": 0.48
+      }
+    },
+    {
+      "id": "a",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5,
+        "P1": 0.5
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5,
+        "P1": 0.5
+      }
+    },
+    {
+      "id": "carry",
+      "type": "AND",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.225,
+        "Pdet_sa1": 0.775,
+        "P0": 0.775,
+        "P1": 0.225
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.225,
+        "Pdet_sa1": 0.16662499999999997,
+        "P0": 0.775,
+        "P1": 0.225
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-b-sum-base",
+      "source": "b",
+      "target": "sum",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-a-carry-base",
+      "source": "a",
+      "target": "carry",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-b-carry-base",
+      "source": "b",
+      "target": "carry",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-a-sum-base",
+      "source": "a",
+      "target": "sum",
+      "is_frw": false,
+      "is_removed": false
+    }
+  ]
+}

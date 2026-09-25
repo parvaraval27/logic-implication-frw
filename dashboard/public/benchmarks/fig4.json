@@ -1,0 +1,429 @@
+{
+  "metrics": {
+    "baseline": {
+      "pi_count": 6,
+      "po_count": 1,
+      "gate_count": 10,
+      "area": 13780,
+      "avg_pdet": 0.21262777777777775
+    },
+    "post_frw": {
+      "pi_count": 6,
+      "po_count": 1,
+      "gate_count": 10,
+      "frw_added": 0,
+      "area": 13780,
+      "area_overhead": 0.0,
+      "avg_pdet": 0.21262777777777775
+    }
+  },
+  "nodes": [
+    {
+      "id": "G2",
+      "type": "OR",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.7785,
+        "Pdet_sa1": 0.0288,
+        "P0": 0.061799999999999966,
+        "P1": 0.9382
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.7785,
+        "Pdet_sa1": 0.0288,
+        "P0": 0.061799999999999966,
+        "P1": 0.9382
+      }
+    },
+    {
+      "id": "e",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5015000000000001,
+        "P1": 0.4985
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5015000000000001,
+        "P1": 0.4985
+      }
+    },
+    {
+      "id": "a",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5025,
+        "P1": 0.4975
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5025,
+        "P1": 0.4975
+      }
+    },
+    {
+      "id": "G1",
+      "type": "OR",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.7785,
+        "Pdet_sa1": 0.0353,
+        "P0": 0.06830000000000003,
+        "P1": 0.9317
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.7785,
+        "Pdet_sa1": 0.0353,
+        "P0": 0.06830000000000003,
+        "P1": 0.9317
+      }
+    },
+    {
+      "id": "G8",
+      "type": "OR",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.5628,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.13029999999999997,
+        "P1": 0.8697
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.5628,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.13029999999999997,
+        "P1": 0.8697
+      }
+    },
+    {
+      "id": "O1",
+      "type": "AND",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.9029,
+        "P0": 0.9029,
+        "P1": 0.0971
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.9029,
+        "P0": 0.9029,
+        "P1": 0.0971
+      }
+    },
+    {
+      "id": "G6",
+      "type": "OR",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.2823,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.255,
+        "P1": 0.745
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.2823,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.255,
+        "P1": 0.745
+      }
+    },
+    {
+      "id": "f",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.4861,
+        "P1": 0.5139
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.4861,
+        "P1": 0.5139
+      }
+    },
+    {
+      "id": "G5",
+      "type": "NOT",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.5044,
+        "P1": 0.4956
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.5044,
+        "P1": 0.4956
+      }
+    },
+    {
+      "id": "h",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.49560000000000004,
+        "P1": 0.5044
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.49560000000000004,
+        "P1": 0.5044
+      }
+    },
+    {
+      "id": "d",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5026999999999999,
+        "P1": 0.4973
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.5026999999999999,
+        "P1": 0.4973
+      }
+    },
+    {
+      "id": "G4",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.2548,
+        "P1": 0.7452
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.2548,
+        "P1": 0.7452
+      }
+    },
+    {
+      "id": "G7",
+      "type": "AND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.6288,
+        "P1": 0.3712
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0971,
+        "P0": 0.6288,
+        "P1": 0.3712
+      }
+    },
+    {
+      "id": "c",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.501,
+        "P1": 0.499
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0,
+        "Pdet_sa1": 0.0,
+        "P0": 0.501,
+        "P1": 0.499
+      }
+    },
+    {
+      "id": "G3",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.7785,
+        "P0": 0.9029,
+        "P1": 0.0971
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.7785,
+        "P0": 0.9029,
+        "P1": 0.0971
+      }
+    },
+    {
+      "id": "G9",
+      "type": "OR",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.0,
+        "P0": 0.12439999999999996,
+        "P1": 0.8756
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.0971,
+        "Pdet_sa1": 0.0,
+        "P0": 0.12439999999999996,
+        "P1": 0.8756
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge-h-G5-base",
+      "source": "h",
+      "target": "G5",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G1-G3-base",
+      "source": "G1",
+      "target": "G3",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G8-G2-base",
+      "source": "G8",
+      "target": "G2",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G7-G8-base",
+      "source": "G7",
+      "target": "G8",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G6-G8-base",
+      "source": "G6",
+      "target": "G8",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G4-G7-base",
+      "source": "G4",
+      "target": "G7",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-f-G4-base",
+      "source": "f",
+      "target": "G4",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-a-G1-base",
+      "source": "a",
+      "target": "G1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-d-G6-base",
+      "source": "d",
+      "target": "G6",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-c-G2-base",
+      "source": "c",
+      "target": "G2",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G3-O1-base",
+      "source": "G3",
+      "target": "O1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G2-G3-base",
+      "source": "G2",
+      "target": "G3",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-e-G6-base",
+      "source": "e",
+      "target": "G6",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-h-G9-base",
+      "source": "h",
+      "target": "G9",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G7-G9-base",
+      "source": "G7",
+      "target": "G9",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-e-G4-base",
+      "source": "e",
+      "target": "G4",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G9-O1-base",
+      "source": "G9",
+      "target": "O1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G5-G7-base",
+      "source": "G5",
+      "target": "G7",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-G8-G1-base",
+      "source": "G8",
+      "target": "G1",
+      "is_frw": false,
+      "is_removed": false
+    }
+  ]
+}
