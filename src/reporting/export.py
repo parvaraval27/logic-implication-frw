@@ -82,11 +82,14 @@ def export_graph_json(circuit_baseline, circuit_post_frw, output_path):
                 "is_removed": False
             })
             
-    from src.reporting.area import compute_area, compute_area_overhead
+    from src.reporting.area import compute_area, compute_area_overhead, compute_transistor_count
     
     orig_area = compute_area(circuit_baseline)
     mod_area = compute_area(circuit_post_frw)
     overhead = compute_area_overhead(orig_area, mod_area)
+
+    orig_transistors = compute_transistor_count(circuit_baseline)
+    mod_transistors = compute_transistor_count(circuit_post_frw)
     
     def avg_pdet(circuit):
         gates = [n for n in circuit.nodes.values() if n.role not in ("PI", "CONST", "PO") and n.type not in ("PI", "WIRE")]
@@ -96,6 +99,7 @@ def export_graph_json(circuit_baseline, circuit_post_frw, output_path):
         
     avg_pdet_base = avg_pdet(circuit_baseline)
     avg_pdet_post = avg_pdet(circuit_post_frw)
+    fr_reduction = ((avg_pdet_base - avg_pdet_post) / avg_pdet_base * 100.0) if avg_pdet_base > 0 else 0.0
     
     # 3. Compute Metrics
     metrics = {
@@ -103,17 +107,24 @@ def export_graph_json(circuit_baseline, circuit_post_frw, output_path):
             "pi_count": len(circuit_baseline.PIs),
             "po_count": len(circuit_baseline.POs),
             "gate_count": len(circuit_baseline.get_gates()),
+            "transistors": orig_transistors,
             "area": orig_area,
-            "avg_pdet": avg_pdet_base
+            "avg_pdet": avg_pdet_base,
+            "failure_rate": avg_pdet_base,
+            "reliability": 1.0 - avg_pdet_base
         },
         "post_frw": {
             "pi_count": len(circuit_post_frw.PIs),
             "po_count": len(circuit_post_frw.POs),
             "gate_count": len(circuit_post_frw.get_gates()),
+            "transistors": mod_transistors,
             "frw_added": len([e for e in edges_data if e["is_frw"]]),
             "area": mod_area,
             "area_overhead": overhead,
-            "avg_pdet": avg_pdet_post
+            "avg_pdet": avg_pdet_post,
+            "failure_rate": avg_pdet_post,
+            "reliability": 1.0 - avg_pdet_post,
+            "fr_reduction": fr_reduction
         }
     }
 

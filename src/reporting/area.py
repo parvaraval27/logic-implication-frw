@@ -23,8 +23,21 @@ def compute_area(circuit):
             continue
         if node.type in ("PI", "WIRE"):
             continue
-        num_inputs = len(node.fanins)
-        total += get_gate_area_ptm130(node.type, num_inputs)
+        total += get_gate_area_ptm130(node.type, len(node.fanins))
+    return total
+
+
+def compute_transistor_count(circuit):
+    """
+    Compute total number of CMOS transistors in the circuit.
+    """
+    total = 0
+    for node in circuit.nodes.values():
+        if node.role in ("PI", "CONST"):
+            continue
+        if node.type in ("PI", "WIRE"):
+            continue
+        total += get_transistor_count(node.type, len(node.fanins))
     return total
 
 

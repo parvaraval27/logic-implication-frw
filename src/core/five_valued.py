@@ -158,6 +158,9 @@ def simulate_5val(circuit, active_fault=None):
                           key=lambda n: n.level if n.level >= 0 else 999999)
     for node in nodes_sorted:
         if node.role in ("PI", "CONST"):
+            if active_fault is not None and node is active_fault.node:
+                good = 1 if node.value == '1' else 0
+                node.value = pair_to_logic(good, active_fault.stuck_at)
             continue
         if node.level == -1:
             continue

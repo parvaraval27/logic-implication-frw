@@ -1,12 +1,12 @@
 """
 Random-pattern fault simulator.
 
-Replaces HOPE [23] from the paper - serial random-pattern simulation
+Replaces HOPE [23] from the paper — serial random-pattern simulation
 using the 5-valued D/D̄ engine to estimate:
   - P0/P1 (signal probabilities) for every gate
   - Pdet_sa0/Pdet_sa1 (stuck-at fault detection probabilities) for every gate
 
-Reference: Paper Section 3.2, Algorithm 1 line 7.
+Reference: Paper §3.2, Algorithm 1 line 7.
 """
 
 import random
@@ -82,7 +82,7 @@ def estimate_detection_probabilities(circuit, num_patterns=10000, seed=None):
         fault_sa1 = Fault(node, 1)
 
         for vec in patterns:
-            # s/0
+            # --- SA0 ---
             # Assign PI values
             for pi in circuit.PIs:
                 pi.value = vec[pi.name]
@@ -95,7 +95,7 @@ def estimate_detection_probabilities(circuit, num_patterns=10000, seed=None):
             if has_fault_at_po(circuit):
                 det_sa0 += 1
 
-            # s/1
+            # --- SA1 ---
             for pi in circuit.PIs:
                 pi.value = vec[pi.name]
             for n in circuit.nodes.values():
