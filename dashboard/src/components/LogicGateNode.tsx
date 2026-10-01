@@ -1,13 +1,12 @@
 import { Handle, Position } from '@xyflow/react';
-import React from 'react';
 import './LogicGateNode.css';
 
-export default function LogicGateNode({ data, isConnectable }) {
+export default function LogicGateNode({ data, isConnectable }: { data: any; isConnectable?: boolean }) {
   const isPostFRW = data.isPostFRW || false;
-
+  
   // Choose probability state to display based on toggle
   const state = isPostFRW && data.post_frw ? data.post_frw : data.baseline;
-
+  
   // Vulnerability heatmap (Red = bad, Green = good)
   // We use Pdet_sa0 and Pdet_sa1. High Pdet is GOOD. Low Pdet is BAD (vulnerable).
   // Calculate average or min Pdet.
@@ -20,7 +19,7 @@ export default function LogicGateNode({ data, isConnectable }) {
   const backgroundColor = `hsl(${hue}, 80%, 60%)`;
 
   return (
-    <div
+    <div 
       className={`logic-gate-node gate-${data.type.toLowerCase()}`}
       style={{ backgroundColor }}
     >

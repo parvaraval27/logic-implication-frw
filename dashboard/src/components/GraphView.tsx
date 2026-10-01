@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import {
   ReactFlow,
   useNodesState,
@@ -7,6 +7,8 @@ import {
   Controls,
   MiniMap,
   MarkerType,
+  type Node,
+  type Edge,
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
@@ -24,8 +26,8 @@ interface GraphViewProps {
 }
 
 export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphViewProps) {
-  const [nodes, setNodes, onNodesChange] = useNodesState([]);
-  const [edges, setEdges, onEdgesChange] = useEdgesState([]);
+  const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
+  const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
 
   useEffect(() => {
     if (!graphData || !graphData.nodes || !graphData.edges) return;
@@ -54,7 +56,7 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
           source: e.source,
           target: e.target,
           animated: isFrwEdge,
-          style: isFrwEdge
+          style: isFrwEdge 
             ? { stroke: '#2196f3', strokeWidth: 3, strokeDasharray: '5,5' }
             : { stroke: '#999', strokeWidth: 2 },
           markerEnd: {
@@ -71,14 +73,14 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
       'LR'
     );
 
-    setNodes(layoutedNodes);
-    setEdges(layoutedEdges);
+    setNodes(layoutedNodes as any);
+    setEdges(layoutedEdges as any);
   }, [graphData, isPostFRW, setNodes, setEdges]);
 
   // When isPostFRW changes, we just need to update the data inside the nodes 
   // so the LogicGateNode component rerenders its colors, and re-filter edges.
   useEffect(() => {
-    setNodes((nds) =>
+    setNodes((nds: any[]) =>
       nds.map((n) => ({
         ...n,
         data: { ...n.data, isPostFRW },
@@ -93,7 +95,7 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
         edges={edges}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
-        onNodeClick={(_, node) => onNodeClick(node.data)}
+        onNodeClick={(_, node: any) => onNodeClick(node.data)}
         nodeTypes={nodeTypes}
         fitView
         attributionPosition="top-right"
