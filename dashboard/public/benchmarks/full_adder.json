@@ -5,7 +5,9 @@
       "po_count": 2,
       "gate_count": 9,
       "area": 9360,
-      "avg_pdet": 0.4178571428571428
+      "avg_pdet": 0.4185714285714286,
+      "failure_rate": 0.4185714285714286,
+      "reliability": 0.5814285714285714
     },
     "post_frw": {
       "pi_count": 3,
@@ -14,7 +16,10 @@
       "frw_added": 0,
       "area": 9360,
       "area_overhead": 0.0,
-      "avg_pdet": 0.329677165527981
+      "avg_pdet": 0.4185714285714286,
+      "failure_rate": 0.4185714285714286,
+      "reliability": 0.5814285714285714,
+      "fr_reduction": 0.0
     }
   },
   "nodes": [
@@ -23,33 +28,16 @@
       "type": "NAND",
       "role": "PO",
       "baseline": {
-        "Pdet_sa0": 0.475,
-        "Pdet_sa1": 0.525,
-        "P0": 0.525,
-        "P1": 0.475
+        "Pdet_sa0": 0.4,
+        "Pdet_sa1": 0.6,
+        "P0": 0.6,
+        "P1": 0.4
       },
       "post_frw": {
-        "Pdet_sa0": 0.475,
-        "Pdet_sa1": 0.525,
-        "P0": 0.525,
-        "P1": 0.475
-      }
-    },
-    {
-      "id": "Sum",
-      "type": "NAND",
-      "role": "PO",
-      "baseline": {
-        "Pdet_sa0": 0.52,
-        "Pdet_sa1": 0.48,
-        "P0": 0.48,
-        "P1": 0.52
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.52,
-        "Pdet_sa1": 0.48,
-        "P0": 0.48,
-        "P1": 0.52
+        "Pdet_sa0": 0.4,
+        "Pdet_sa1": 0.6,
+        "P0": 0.6,
+        "P1": 0.4
       }
     },
     {
@@ -57,84 +45,16 @@
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.48,
-        "Pdet_sa1": 0.25,
-        "P0": 0.25,
-        "P1": 0.75
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
       },
       "post_frw": {
-        "Pdet_sa0": 0.2232,
-        "Pdet_sa1": 0.25,
-        "P0": 0.25,
-        "P1": 0.75
-      }
-    },
-    {
-      "id": "A",
-      "type": "PI",
-      "role": "PI",
-      "baseline": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.49,
-        "P1": 0.51
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.49,
-        "P1": 0.51
-      }
-    },
-    {
-      "id": "N4",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.485,
-        "Pdet_sa1": 0.515,
-        "P0": 0.515,
-        "P1": 0.485
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.485,
-        "Pdet_sa1": 0.515,
-        "P0": 0.515,
-        "P1": 0.485
-      }
-    },
-    {
-      "id": "Cin",
-      "type": "PI",
-      "role": "PI",
-      "baseline": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.5349999999999999,
-        "P1": 0.465
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.5349999999999999,
-        "P1": 0.465
-      }
-    },
-    {
-      "id": "N5",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.64,
-        "Pdet_sa1": 0.215,
-        "P0": 0.21499999999999997,
-        "P1": 0.785
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.4355928888888889,
-        "Pdet_sa1": 0.215,
-        "P0": 0.21499999999999997,
-        "P1": 0.785
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
       }
     },
     {
@@ -142,16 +62,16 @@
       "type": "PI",
       "role": "PI",
       "baseline": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.505,
-        "P1": 0.495
+        "Pdet_sa0": 0.52,
+        "Pdet_sa1": 0.48,
+        "P0": 0.48,
+        "P1": 0.52
       },
       "post_frw": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.505,
-        "P1": 0.495
+        "Pdet_sa0": 0.52,
+        "Pdet_sa1": 0.48,
+        "P0": 0.48,
+        "P1": 0.52
       }
     },
     {
@@ -159,50 +79,50 @@
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.74,
-        "Pdet_sa1": 0.26,
-        "P0": 0.26,
-        "P1": 0.74
+        "Pdet_sa0": 0.76,
+        "Pdet_sa1": 0.24,
+        "P0": 0.24,
+        "P1": 0.76
       },
       "post_frw": {
-        "Pdet_sa0": 0.6604495432098765,
-        "Pdet_sa1": 0.26,
-        "P0": 0.26,
-        "P1": 0.74
+        "Pdet_sa0": 0.76,
+        "Pdet_sa1": 0.24,
+        "P0": 0.24,
+        "P1": 0.76
       }
     },
     {
-      "id": "N6",
+      "id": "Sum",
       "type": "NAND",
-      "role": "INTERNAL",
+      "role": "PO",
       "baseline": {
-        "Pdet_sa0": 0.48,
-        "Pdet_sa1": 0.27,
-        "P0": 0.27,
-        "P1": 0.73
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.44,
+        "P0": 0.43999999999999995,
+        "P1": 0.56
       },
       "post_frw": {
-        "Pdet_sa0": 0.23279999999999998,
-        "Pdet_sa1": 0.27,
-        "P0": 0.27,
-        "P1": 0.73
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.44,
+        "P0": 0.43999999999999995,
+        "P1": 0.56
       }
     },
     {
-      "id": "N2",
+      "id": "N4",
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.515,
-        "Pdet_sa1": 0.25,
-        "P0": 0.25,
-        "P1": 0.75
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.56,
+        "P0": 0.56,
+        "P1": 0.44
       },
       "post_frw": {
-        "Pdet_sa0": 0.2923436084765625,
-        "Pdet_sa1": 0.25,
-        "P0": 0.25,
-        "P1": 0.75
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.56,
+        "P0": 0.56,
+        "P1": 0.44
       }
     },
     {
@@ -210,23 +130,108 @@
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.515,
-        "Pdet_sa1": 0.235,
-        "P0": 0.235,
-        "P1": 0.765
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
       },
       "post_frw": {
-        "Pdet_sa0": 0.2910942768164062,
-        "Pdet_sa1": 0.235,
-        "P0": 0.235,
-        "P1": 0.765
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
+      }
+    },
+    {
+      "id": "A",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.4,
+        "Pdet_sa1": 0.6,
+        "P0": 0.6,
+        "P1": 0.4
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.4,
+        "Pdet_sa1": 0.6,
+        "P0": 0.6,
+        "P1": 0.4
+      }
+    },
+    {
+      "id": "N2",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.16,
+        "P0": 0.16000000000000003,
+        "P1": 0.84
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.56,
+        "Pdet_sa1": 0.16,
+        "P0": 0.16000000000000003,
+        "P1": 0.84
+      }
+    },
+    {
+      "id": "N5",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.7,
+        "Pdet_sa1": 0.16,
+        "P0": 0.16000000000000003,
+        "P1": 0.84
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.7,
+        "Pdet_sa1": 0.16,
+        "P0": 0.16000000000000003,
+        "P1": 0.84
+      }
+    },
+    {
+      "id": "Cin",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.56,
+        "P0": 0.56,
+        "P1": 0.44
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.56,
+        "P0": 0.56,
+        "P1": 0.44
+      }
+    },
+    {
+      "id": "N6",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.44,
+        "Pdet_sa1": 0.28,
+        "P0": 0.28,
+        "P1": 0.72
       }
     }
   ],
   "edges": [
     {
-      "id": "edge-N3-N4-base",
-      "source": "N3",
+      "id": "edge-N2-N4-base",
+      "source": "N2",
       "target": "N4",
       "is_frw": false,
       "is_removed": false
@@ -239,13 +244,6 @@
       "is_removed": false
     },
     {
-      "id": "edge-Cin-N5-base",
-      "source": "Cin",
-      "target": "N5",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
       "id": "edge-A-N2-base",
       "source": "A",
       "target": "N2",
@@ -253,16 +251,37 @@
       "is_removed": false
     },
     {
-      "id": "edge-N4-N5-base",
-      "source": "N4",
-      "target": "N5",
+      "id": "edge-N1-N3-base",
+      "source": "N1",
+      "target": "N3",
       "is_frw": false,
       "is_removed": false
     },
     {
-      "id": "edge-N5-N7-base",
-      "source": "N5",
-      "target": "N7",
+      "id": "edge-B-N1-base",
+      "source": "B",
+      "target": "N1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-B-N3-base",
+      "source": "B",
+      "target": "N3",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-A-N1-base",
+      "source": "A",
+      "target": "N1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N3-N4-base",
+      "source": "N3",
+      "target": "N4",
       "is_frw": false,
       "is_removed": false
     },
@@ -281,9 +300,23 @@
       "is_removed": false
     },
     {
-      "id": "edge-B-N1-base",
-      "source": "B",
-      "target": "N1",
+      "id": "edge-N5-N7-base",
+      "source": "N5",
+      "target": "N7",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N5-Cout-base",
+      "source": "N5",
+      "target": "Cout",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N4-N5-base",
+      "source": "N4",
+      "target": "N5",
       "is_frw": false,
       "is_removed": false
     },
@@ -295,9 +328,9 @@
       "is_removed": false
     },
     {
-      "id": "edge-Cin-N7-base",
+      "id": "edge-Cin-N5-base",
       "source": "Cin",
-      "target": "N7",
+      "target": "N5",
       "is_frw": false,
       "is_removed": false
     },
@@ -316,37 +349,9 @@
       "is_removed": false
     },
     {
-      "id": "edge-N5-Cout-base",
-      "source": "N5",
-      "target": "Cout",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-B-N3-base",
-      "source": "B",
-      "target": "N3",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N1-N3-base",
-      "source": "N1",
-      "target": "N3",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N2-N4-base",
-      "source": "N2",
-      "target": "N4",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-A-N1-base",
-      "source": "A",
-      "target": "N1",
+      "id": "edge-Cin-N7-base",
+      "source": "Cin",
+      "target": "N7",
       "is_frw": false,
       "is_removed": false
     }

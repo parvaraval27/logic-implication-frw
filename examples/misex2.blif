@@ -1,0 +1,51 @@
+.model misex2
+.inputs pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24
+.outputs po_0 po_1 po_2 po_3 po_4 po_5 po_6 po_7 po_8 po_9 po_10 po_11 po_12 po_13 po_14 po_15 po_16 po_17
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_0
+000------01------000----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_1
+000------11------000----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_2
+000------10------000----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_3
+000--------------010----- 1
+111------0111------------ 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_4
+111------0100------------ 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_5
+111------11-------------- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_6
+111------011------------- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_7
+101---------------------- 1
+1-1------0110------------ 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_8
+001010000--------101----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_9
+01----------------10000-- 1
+001--------010000---100-- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_10
+01----------------10011-- 1
+001--------010011---100-- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_11
+01----------------10010-- 1
+001--------010010---100-- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_12
+110------1--------------0 1
+11-------10-------------0 1
+001------1-------------10 1
+00-------1---------1---10 1
+000------1-------1-0----0 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_13
+000--------------1-0----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_14
+000------00------000----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_15
+1-0---------------------- 1
+11--------0-------------- 1
+-00----------------1----- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_16
+01----------------------- 1
+.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_17
+001---------------------- 1
+.end

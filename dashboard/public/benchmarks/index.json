@@ -1,3 +1,15 @@
 [
-  "fig4"
+  "4-bit magnitude comparator",
+  "6 bit ALU",
+  "8 bit barrel shifter",
+  "8 bit carry select adder",
+  "c17",
+  "full_adder",
+  "half_adder",
+  "fig1",
+  "fig4",
+  "fig5",
+  "misex1",
+  "misex2",
+  "squar5"
 ]

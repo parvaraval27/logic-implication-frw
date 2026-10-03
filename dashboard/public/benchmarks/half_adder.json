@@ -5,7 +5,9 @@
       "po_count": 2,
       "gate_count": 2,
       "area": 2990.0,
-      "avg_pdet": 0
+      "avg_pdet": 0,
+      "failure_rate": 0,
+      "reliability": 1.0
     },
     "post_frw": {
       "pi_count": 2,
@@ -14,25 +16,28 @@
       "frw_added": 0,
       "area": 2990.0,
       "area_overhead": 0.0,
-      "avg_pdet": 0
+      "avg_pdet": 0,
+      "failure_rate": 0,
+      "reliability": 1.0,
+      "fr_reduction": 0.0
     }
   },
   "nodes": [
     {
-      "id": "b",
-      "type": "PI",
-      "role": "PI",
+      "id": "carry",
+      "type": "AND",
+      "role": "PO",
       "baseline": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.5700000000000001,
-        "P1": 0.43
+        "Pdet_sa0": 0.2,
+        "Pdet_sa1": 0.8,
+        "P0": 0.8,
+        "P1": 0.2
       },
       "post_frw": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
-        "P0": 0.5700000000000001,
-        "P1": 0.43
+        "Pdet_sa0": 0.2,
+        "Pdet_sa1": 0.8,
+        "P0": 0.8,
+        "P1": 0.2
       }
     },
     {
@@ -57,33 +62,33 @@
       "type": "PI",
       "role": "PI",
       "baseline": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
+        "Pdet_sa0": 0.5,
+        "Pdet_sa1": 0.5,
         "P0": 0.5,
         "P1": 0.5
       },
       "post_frw": {
-        "Pdet_sa0": 0.0,
-        "Pdet_sa1": 0.0,
+        "Pdet_sa0": 0.5,
+        "Pdet_sa1": 0.5,
         "P0": 0.5,
         "P1": 0.5
       }
     },
     {
-      "id": "carry",
-      "type": "AND",
-      "role": "PO",
+      "id": "b",
+      "type": "PI",
+      "role": "PI",
       "baseline": {
-        "Pdet_sa0": 0.225,
-        "Pdet_sa1": 0.775,
-        "P0": 0.775,
-        "P1": 0.225
+        "Pdet_sa0": 0.38,
+        "Pdet_sa1": 0.62,
+        "P0": 0.62,
+        "P1": 0.38
       },
       "post_frw": {
-        "Pdet_sa0": 0.225,
-        "Pdet_sa1": 0.16662499999999997,
-        "P0": 0.775,
-        "P1": 0.225
+        "Pdet_sa0": 0.38,
+        "Pdet_sa1": 0.62,
+        "P0": 0.62,
+        "P1": 0.38
       }
     }
   ],
@@ -96,9 +101,9 @@
       "is_removed": false
     },
     {
-      "id": "edge-a-carry-base",
+      "id": "edge-a-sum-base",
       "source": "a",
-      "target": "carry",
+      "target": "sum",
       "is_frw": false,
       "is_removed": false
     },
@@ -110,9 +115,9 @@
       "is_removed": false
     },
     {
-      "id": "edge-a-sum-base",
+      "id": "edge-a-carry-base",
       "source": "a",
-      "target": "sum",
+      "target": "carry",
       "is_frw": false,
       "is_removed": false
     }
