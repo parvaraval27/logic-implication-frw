@@ -14,7 +14,7 @@ Algorithm:
 This module provides a bounded-depth recursive learning approach.
 """
 
-from src.core.netlist_graph import Implication
+from src.core.netlist_graph import Implication, compute_logic_cone
 from src.implications.direct_implication import _propagate
 
 
@@ -49,15 +49,17 @@ def learn_indirect_implications(circuit, sources, targets, max_depth=2):
 
         # Find targets already discovered by direct propagation
         direct_targets = {t.name for t in targets if t.name in base_assigned}
+        unresolved_targets = [t for t in targets if t.name not in direct_targets]
+        if not unresolved_targets:
+            continue
 
-        # Collect ALL unresolved internal gates as case-split candidates.
-        # Unlike the previous version which only included gates with at
-        # least one assigned fanin, we include all internal gates.
-        # This is essential for finding h=0 => G3=0 in Fig 5, where G4
-        # (with unassigned inputs e, f) must be case-split.
+        relevant_cones = set()
+        for t in unresolved_targets:
+            relevant_cones.update(compute_logic_cone(circuit, t))
+
         candidates = []
         for node in circuit.nodes.values():
-            if node.name not in base_assigned and node.role not in ("PI", "CONST"):
+            if node in relevant_cones and node.name not in base_assigned and node.role not in ("PI", "CONST"):
                 if node.type not in ("PI", "WIRE"):
                     candidates.append(node)
 

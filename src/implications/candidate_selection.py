@@ -7,23 +7,38 @@ Reference: Paper §3.2, Algorithm 1 lines 8-9.
 """
 
 
-def select_sources(circuit, Th1=0.3, limit=50):
+def select_sources(circuit, Th1=0.3, limit=100):
     """
     Select source gate candidates: gates whose P0 or P1 >= Th1.
-    Sorts by highest probability and limits to top `limit` to prevent O(N^2) explosion in Python.
+    Primary inputs are explicitly included so that internal gates with high P0/P1
+    do not crowd them out.
     """
-    sources = []
+    pi_sources = []
+    other_sources = []
+
+    for pi in circuit.PIs:
+        if pi.P0 >= Th1:
+            pi_sources.append((pi, '0', pi.P0))
+        if pi.P1 >= Th1:
+            pi_sources.append((pi, '1', pi.P1))
+
     for node in circuit.nodes.values():
-        if node.role in ("CONST", "PO"):
+        if node.role in ("CONST", "PO", "PI"):
             continue
         if node.P0 >= Th1:
-            sources.append((node, '0', node.P0))
+            other_sources.append((node, '0', node.P0))
         if node.P1 >= Th1:
-            sources.append((node, '1', node.P1))
-            
-    # Sort by probability descending and limit
-    sources.sort(key=lambda x: x[2], reverse=True)
-    return [(n, v) for n, v, p in sources[:limit]]
+            other_sources.append((node, '1', node.P1))
+
+    other_sources.sort(key=lambda x: x[2], reverse=True)
+
+    if limit is not None:
+        remaining_slots = max(0, limit - len(pi_sources))
+        combined = pi_sources + other_sources[:remaining_slots]
+    else:
+        combined = pi_sources + other_sources
+
+    return [(n, v) for n, v, p in combined]
 
 
 def select_targets(circuit, Th2=0.4, limit=50):

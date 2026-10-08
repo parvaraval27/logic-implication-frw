@@ -1,6 +1,6 @@
 import json
 
-def export_graph_json(circuit_baseline, circuit_post_frw, output_path):
+def export_graph_json(circuit_baseline, circuit_post_frw, output_path, frw_added=None):
     """
     Exports the circuit topologies and probability states (baseline vs post-FRW)
     into a JSON format suitable for the React Flow frontend.
@@ -118,7 +118,7 @@ def export_graph_json(circuit_baseline, circuit_post_frw, output_path):
             "po_count": len(circuit_post_frw.POs),
             "gate_count": len(circuit_post_frw.get_gates()),
             "transistors": mod_transistors,
-            "frw_added": len([e for e in edges_data if e["is_frw"]]),
+            "frw_added": frw_added if frw_added is not None else len([e for e in edges_data if e["is_frw"] and not e["target"].startswith("INV_")]),
             "area": mod_area,
             "area_overhead": overhead,
             "avg_pdet": avg_pdet_post,

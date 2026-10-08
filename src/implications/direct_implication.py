@@ -155,40 +155,32 @@ def _backward_justify(node, assigned):
 def _propagate(circuit, assigned):
     """
     Iteratively apply forward propagation and backward justification
-    until no new values can be determined.
+    until no new values can be determined, using an event-driven queue.
 
     Returns the final assigned dict (name -> '0'/'1').
     """
-    changed = True
-    while changed:
-        changed = False
+    queue = deque(circuit.nodes[name] for name in assigned if name in circuit.nodes)
 
-        # Forward pass: for gates whose output is not yet assigned,
-        # try to compute it from known inputs
-        for node in circuit.nodes.values():
-            if node.name in assigned:
-                continue
-            if node.role in ("PI", "CONST"):
-                continue
-            if not node.fanins:
-                continue
-            result = _forward_eval(node, assigned)
-            if result is not None:
-                assigned[node.name] = result
-                changed = True
+    while queue:
+        node = queue.popleft()
 
-        # Backward pass: for gates whose output is assigned,
-        # try to determine unknown inputs
-        for node in circuit.nodes.values():
-            if node.name not in assigned:
-                continue
-            if node.role in ("PI", "CONST"):
-                continue
+        # Backward justification from this node (its output is assigned)
+        if node.role not in ("PI", "CONST") and node.name in assigned:
             new_vals = _backward_justify(node, assigned)
             for inp_name, val in new_vals.items():
                 if inp_name not in assigned:
                     assigned[inp_name] = val
-                    changed = True
+                    inp_node = circuit.nodes.get(inp_name)
+                    if inp_node:
+                        queue.append(inp_node)
+
+        # Forward propagation to fanouts of this node
+        for fout in node.fanouts:
+            if fout.name not in assigned and fout.role not in ("PI", "CONST") and fout.fanins:
+                res = _forward_eval(fout, assigned)
+                if res is not None:
+                    assigned[fout.name] = res
+                    queue.append(fout)
 
     return assigned
 

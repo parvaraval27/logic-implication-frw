@@ -156,7 +156,8 @@ def _update_detection_probs(circuit, implication, effective_target):
 
 def run_implication_pipeline(circuit, Th1=0.3, Th2=0.4, gain_threshold=0.02,
                               num_patterns=10000, seed=42,
-                              use_indirect=False, verbose=True, verify_fig4=False):
+                              use_indirect=False, verbose=True, verify_fig4=False,
+                              max_frws=None):
     """
     Main pipeline driver — Algorithm 1.
 
@@ -169,6 +170,7 @@ def run_implication_pipeline(circuit, Th1=0.3, Th2=0.4, gain_threshold=0.02,
         seed: random seed for reproducibility
         use_indirect: whether to use indirect implication learning
         verbose: print progress information
+        max_frws: optional maximum number of FRWs to add
 
     Returns:
         dict with pipeline results
@@ -290,7 +292,13 @@ def run_implication_pipeline(circuit, Th1=0.3, Th2=0.4, gain_threshold=0.02,
 
         # Line 21: Add FRW
         frw_result = add_frw(circuit, best)
+        frw_result['gain'] = best.gain
         frw_details.append(frw_result)
+
+        if max_frws is not None and len(frw_details) >= max_frws:
+            if verbose:
+                print(f"  Reached max_frws limit of {max_frws}. Stopping.")
+            break
 
         # Re-levelize after structural change
         levelize(circuit)
@@ -344,8 +352,17 @@ def run_implication_pipeline(circuit, Th1=0.3, Th2=0.4, gain_threshold=0.02,
         implications.remove(best)
 
         # Line 23: Update gains for remaining implications
+        # Only re-evaluate implications whose path gates had their detection probabilities
+        # modified, or whose source/target overlaps with the newly added wire.
+        updated_gate_names = {g.name for g in best.path_gates}
+        dest_name = effective_target.name if effective_target else best.target.name
+        source_name = best.source.name
+
         for impl in implications:
-            evaluate_implication(circuit, impl)
+            if (any(g.name in updated_gate_names for g in impl.path_gates) or
+                impl.target.name == dest_name or
+                impl.source.name == source_name):
+                evaluate_implication(circuit, impl)
 
     if verbose:
         print(f"\nDone: Added {len(frw_details)} FRWs in {iteration} iterations.")
