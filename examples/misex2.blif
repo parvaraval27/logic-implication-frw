@@ -1,51 +1,335 @@
 .model misex2
-.inputs pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24
-.outputs po_0 po_1 po_2 po_3 po_4 po_5 po_6 po_7 po_8 po_9 po_10 po_11 po_12 po_13 po_14 po_15 po_16 po_17
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_0
-000------01------000----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_1
-000------11------000----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_2
-000------10------000----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_3
-000--------------010----- 1
-111------0111------------ 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_4
-111------0100------------ 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_5
-111------11-------------- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_6
-111------011------------- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_7
-101---------------------- 1
-1-1------0110------------ 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_8
-001010000--------101----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_9
-01----------------10000-- 1
-001--------010000---100-- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_10
-01----------------10011-- 1
-001--------010011---100-- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_11
-01----------------10010-- 1
-001--------010010---100-- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_12
-110------1--------------0 1
-11-------10-------------0 1
-001------1-------------10 1
-00-------1---------1---10 1
-000------1-------1-0----0 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_13
-000--------------1-0----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_14
-000------00------000----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_15
-1-0---------------------- 1
-11--------0-------------- 1
--00----------------1----- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_16
-01----------------------- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 pi_8 pi_9 pi_10 pi_11 pi_12 pi_13 pi_14 pi_15 pi_16 pi_17 pi_18 pi_19 pi_20 pi_21 pi_22 pi_23 pi_24 po_17
-001---------------------- 1
+.inputs a b c d e f g h i j k l m n o p q r s t u v w x y
+.outputs z a1 b1 c1 d1 e1 f1 g1 h1 i1 j1 k1 l1 m1 n1 o1 p1 q1
+.names a inv_a
+0 1
+.names b inv_b
+0 1
+.names c inv_c
+0 1
+.names j inv_j
+0 1
+.names r inv_r
+0 1
+.names s inv_s
+0 1
+.names t inv_t
+0 1
+.names k inv_k
+0 1
+.names k l m nand_sub_18
+111 0
+.names l inv_l
+0 1
+.names m inv_m
+0 1
+.names a b c j nand_sub_31
+1111 0
+.names k l nand_sub_36
+11 0
+.names d inv_d
+0 1
+.names f inv_f
+0 1
+.names g inv_g
+0 1
+.names h inv_h
+0 1
+.names i inv_i
+0 1
+.names u inv_u
+0 1
+.names v inv_v
+0 1
+.names w inv_w
+0 1
+.names n inv_n
+0 1
+.names o inv_o
+0 1
+.names p inv_p
+0 1
+.names q inv_q
+0 1
+.names y inv_y
+0 1
+.names inv_a inv_b inv_c inv_j nand_sub_1
+1111 0
+.names k inv_r inv_s inv_t nand_sub_3
+1111 0
+.names inv_a inv_b inv_c j nand_sub_6
+1111 0
+.names k inv_r inv_s inv_t nand_sub_8
+1111 0
+.names inv_a inv_b inv_c j nand_sub_11
+1111 0
+.names inv_k inv_r inv_s inv_t nand_sub_13
+1111 0
+.names a b c inv_j nand_sub_16
+1111 0
+.names nand_sub_18 inv_sub_19
+0 1
+.names inv_a inv_b inv_c inv_r nand_sub_21
+1111 0
+.names s inv_t nand_sub_23
+11 0
+.names a b c inv_j nand_sub_26
+1111 0
+.names k inv_l inv_m nand_sub_28
+111 0
+.names nand_sub_31 inv_sub_32
+0 1
+.names a b c inv_j nand_sub_34
+1111 0
+.names nand_sub_36 inv_sub_37
+0 1
+.names a inv_b c nand_term_39
+111 0
+.names a c inv_j k nand_sub_40
+1111 0
+.names l inv_m nand_sub_42
+11 0
+.names inv_a inv_b c inv_d nand_sub_45
+1111 0
+.names e inv_f inv_g inv_h nand_sub_47
+1111 0
+.names inv_i r inv_s t nand_sub_49
+1111 0
+.names inv_a b s inv_t nand_sub_52
+1111 0
+.names inv_u inv_v inv_w nand_sub_54
+111 0
+.names inv_a inv_b c inv_l nand_sub_57
+1111 0
+.names m inv_n inv_o inv_p nand_sub_59
+1111 0
+.names inv_q u inv_v inv_w nand_sub_61
+1111 0
+.names inv_a b s inv_t nand_sub_64
+1111 0
+.names inv_u v w nand_sub_66
+111 0
+.names inv_a inv_b c inv_l nand_sub_69
+1111 0
+.names m inv_n inv_o p nand_sub_71
+1111 0
+.names q u inv_v inv_w nand_sub_73
+1111 0
+.names inv_a inv_b c inv_l nand_sub_76
+1111 0
+.names m inv_n inv_o p nand_sub_78
+1111 0
+.names inv_q u inv_v inv_w nand_sub_80
+1111 0
+.names inv_a b s inv_t nand_sub_83
+1111 0
+.names inv_u v inv_w nand_sub_85
+111 0
+.names a b inv_c j nand_sub_88
+1111 0
+.names inv_a inv_b j t nand_sub_91
+1111 0
+.names x inv_y nand_sub_93
+11 0
+.names inv_a inv_b c j nand_sub_96
+1111 0
+.names x inv_y nand_sub_98
+11 0
+.names inv_a inv_b inv_c j nand_sub_101
+1111 0
+.names r inv_t inv_y nand_sub_103
+111 0
+.names a b j inv_k nand_sub_106
+1111 0
+.names inv_a inv_b inv_c r nand_sub_112
+1111 0
+.names inv_a inv_b inv_c inv_j nand_sub_115
+1111 0
+.names inv_k inv_r inv_s inv_t nand_sub_117
+1111 0
+.names a inv_c nand_term_120
+11 0
+.names a b inv_k nand_term_121
+111 0
+.names inv_b inv_c t nand_term_122
+111 0
+.names inv_a b nand_term_123
+11 0
+.names inv_a inv_b c nand_term_124
+111 0
+.names nand_sub_1 inv_sub_2
+0 1
+.names nand_sub_3 inv_sub_4
+0 1
+.names nand_sub_6 inv_sub_7
+0 1
+.names nand_sub_8 inv_sub_9
+0 1
+.names nand_sub_11 inv_sub_12
+0 1
+.names nand_sub_13 inv_sub_14
+0 1
+.names nand_sub_16 inv_sub_17
+0 1
+.names nand_sub_21 inv_sub_22
+0 1
+.names nand_sub_23 inv_sub_24
+0 1
+.names nand_sub_26 inv_sub_27
+0 1
+.names nand_sub_28 inv_sub_29
+0 1
+.names inv_sub_32 k nand_term_33
+11 0
+.names nand_sub_34 inv_sub_35
+0 1
+.names nand_sub_40 inv_sub_41
+0 1
+.names nand_sub_42 inv_sub_43
+0 1
+.names nand_sub_45 inv_sub_46
+0 1
+.names nand_sub_47 inv_sub_48
+0 1
+.names nand_sub_49 inv_sub_50
+0 1
+.names nand_sub_52 inv_sub_53
+0 1
+.names nand_sub_54 inv_sub_55
+0 1
+.names nand_sub_57 inv_sub_58
+0 1
+.names nand_sub_59 inv_sub_60
+0 1
+.names nand_sub_61 inv_sub_62
+0 1
+.names nand_sub_64 inv_sub_65
+0 1
+.names nand_sub_66 inv_sub_67
+0 1
+.names nand_sub_69 inv_sub_70
+0 1
+.names nand_sub_71 inv_sub_72
+0 1
+.names nand_sub_73 inv_sub_74
+0 1
+.names nand_sub_76 inv_sub_77
+0 1
+.names nand_sub_78 inv_sub_79
+0 1
+.names nand_sub_80 inv_sub_81
+0 1
+.names nand_sub_83 inv_sub_84
+0 1
+.names nand_sub_85 inv_sub_86
+0 1
+.names nand_sub_88 inv_sub_89
+0 1
+.names nand_sub_91 inv_sub_92
+0 1
+.names nand_sub_93 inv_sub_94
+0 1
+.names nand_sub_96 inv_sub_97
+0 1
+.names nand_sub_98 inv_sub_99
+0 1
+.names nand_sub_101 inv_sub_102
+0 1
+.names nand_sub_103 inv_sub_104
+0 1
+.names nand_sub_106 inv_sub_107
+0 1
+.names nand_sub_112 inv_sub_113
+0 1
+.names nand_sub_115 inv_sub_116
+0 1
+.names nand_sub_117 inv_sub_118
+0 1
+.names nand_term_120 nand_term_121 nand_term_122 o1
+111 0
+.names nand_term_123 p1
+0 1
+.names nand_term_124 q1
+0 1
+.names inv_sub_2 inv_sub_4 nand_term_5
+11 0
+.names inv_sub_7 inv_sub_9 nand_term_10
+11 0
+.names inv_sub_12 inv_sub_14 nand_term_15
+11 0
+.names inv_sub_17 inv_sub_19 nand_term_20
+11 0
+.names inv_sub_22 inv_sub_24 nand_term_25
+11 0
+.names inv_sub_27 inv_sub_29 nand_term_30
+11 0
+.names nand_term_33 e1
+0 1
+.names inv_sub_35 inv_sub_37 nand_term_38
+11 0
+.names inv_sub_41 inv_sub_43 nand_term_44
+11 0
+.names inv_sub_46 inv_sub_48 inv_sub_50 nand_term_51
+111 0
+.names inv_sub_53 inv_sub_55 nand_term_56
+11 0
+.names inv_sub_58 inv_sub_60 inv_sub_62 nand_term_63
+111 0
+.names inv_sub_65 inv_sub_67 nand_term_68
+11 0
+.names inv_sub_70 inv_sub_72 inv_sub_74 nand_term_75
+111 0
+.names inv_sub_77 inv_sub_79 inv_sub_81 nand_term_82
+111 0
+.names inv_sub_84 inv_sub_86 nand_term_87
+11 0
+.names inv_sub_89 inv_y nand_term_90
+11 0
+.names inv_sub_92 inv_sub_94 nand_term_95
+11 0
+.names inv_sub_97 inv_sub_99 nand_term_100
+11 0
+.names inv_sub_102 inv_sub_104 nand_term_105
+11 0
+.names inv_sub_107 inv_y nand_term_108
+11 0
+.names inv_sub_113 inv_t nand_term_114
+11 0
+.names inv_sub_116 inv_sub_118 nand_term_119
+11 0
+.names nand_term_5 z
+0 1
+.names nand_term_10 a1
+0 1
+.names nand_term_15 b1
+0 1
+.names nand_term_20 nand_term_25 c1
+11 0
+.names nand_term_30 d1
+0 1
+.names nand_term_38 f1
+0 1
+.names nand_term_39 nand_term_44 g1
+11 0
+.names nand_term_51 h1
+0 1
+.names nand_term_56 nand_term_63 i1
+11 0
+.names nand_term_68 nand_term_75 j1
+11 0
+.names nand_term_82 nand_term_87 k1
+11 0
+.names nand_term_90 nand_term_95 nand_term_100 nand_term_105 sub_or_109
+1111 0
+.names nand_term_108 sub_or_110
+1 0
+.names nand_term_114 m1
+0 1
+.names nand_term_119 n1
+0 1
+.names sub_or_109 sub_or_110 nor_111
+1- 0
+-1 0
+.names nor_111 l1
+0 1
 .end

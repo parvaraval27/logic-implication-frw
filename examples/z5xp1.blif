@@ -1,590 +1,325 @@
 .model Z5xp1
 .inputs pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6
 .outputs po_0 po_1 po_2 po_3 po_4 po_5 po_6 po_7 po_8 po_9
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_0
-1100111 1
-1101000 1
-1101001 1
-1101010 1
-1101011 1
-1101100 1
-1101101 1
-1101110 1
-1101111 1
-1110000 1
-1110001 1
-1110010 1
-1110011 1
-1110100 1
-1110101 1
-1110110 1
-1110111 1
-1111000 1
-1111001 1
-1111010 1
-1111011 1
-1111100 1
-1111101 1
-1111110 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_1
-0110011 1
-0110100 1
-0110101 1
-0110110 1
-0110111 1
-0111000 1
-0111001 1
-0111010 1
-0111011 1
-0111100 1
-0111101 1
-0111110 1
-0111111 1
-1000000 1
-1000001 1
-1000010 1
-1000011 1
-1000100 1
-1000101 1
-1000110 1
-1000111 1
-1001000 1
-1001001 1
-1001010 1
-1001011 1
-1001100 1
-1001101 1
-1001110 1
-1001111 1
-1010000 1
-1010001 1
-1010010 1
-1010011 1
-1010100 1
-1010101 1
-1010110 1
-1010111 1
-1011000 1
-1011001 1
-1011010 1
-1011011 1
-1011100 1
-1011101 1
-1011110 1
-1011111 1
-1100000 1
-1100001 1
-1100010 1
-1100011 1
-1100100 1
-1100101 1
-1100110 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_2
-0011010 1
-0011011 1
-0011100 1
-0011101 1
-0011110 1
-0011111 1
-0100000 1
-0100001 1
-0100010 1
-0100011 1
-0100100 1
-0100101 1
-0100110 1
-0100111 1
-0101000 1
-0101001 1
-0101010 1
-0101011 1
-0101100 1
-0101101 1
-0101110 1
-0101111 1
-0110000 1
-0110001 1
-0110010 1
-1001101 1
-1001110 1
-1001111 1
-1010000 1
-1010001 1
-1010010 1
-1010011 1
-1010100 1
-1010101 1
-1010110 1
-1010111 1
-1011000 1
-1011001 1
-1011010 1
-1011011 1
-1011100 1
-1011101 1
-1011110 1
-1011111 1
-1100000 1
-1100001 1
-1100010 1
-1100011 1
-1100100 1
-1100101 1
-1100110 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_3
-0001101 1
-0001110 1
-0001111 1
-0010000 1
-0010001 1
-0010010 1
-0010011 1
-0010100 1
-0010101 1
-0010110 1
-0010111 1
-0011000 1
-0011001 1
-0100111 1
-0101000 1
-0101001 1
-0101010 1
-0101011 1
-0101100 1
-0101101 1
-0101110 1
-0101111 1
-0110000 1
-0110001 1
-0110010 1
-1000000 1
-1000001 1
-1000010 1
-1000011 1
-1000100 1
-1000101 1
-1000110 1
-1000111 1
-1001000 1
-1001001 1
-1001010 1
-1001011 1
-1001100 1
-1011010 1
-1011011 1
-1011100 1
-1011101 1
-1011110 1
-1011111 1
-1100000 1
-1100001 1
-1100010 1
-1100011 1
-1100100 1
-1100101 1
-1100110 1
-1110011 1
-1110100 1
-1110101 1
-1110110 1
-1110111 1
-1111000 1
-1111001 1
-1111010 1
-1111011 1
-1111100 1
-1111101 1
-1111110 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_4
-0000111 1
-0001000 1
-0001001 1
-0001010 1
-0001011 1
-0001100 1
-0010011 1
-0010100 1
-0010101 1
-0010110 1
-0010111 1
-0011000 1
-0011001 1
-0100000 1
-0100001 1
-0100010 1
-0100011 1
-0100100 1
-0100101 1
-0100110 1
-0101101 1
-0101110 1
-0101111 1
-0110000 1
-0110001 1
-0110010 1
-0111010 1
-0111011 1
-0111100 1
-0111101 1
-0111110 1
-0111111 1
-1000111 1
-1001000 1
-1001001 1
-1001010 1
-1001011 1
-1001100 1
-1010011 1
-1010100 1
-1010101 1
-1010110 1
-1010111 1
-1011000 1
-1011001 1
-1100000 1
-1100001 1
-1100010 1
-1100011 1
-1100100 1
-1100101 1
-1100110 1
-1101101 1
-1101110 1
-1101111 1
-1110000 1
-1110001 1
-1110010 1
-1111010 1
-1111011 1
-1111100 1
-1111101 1
-1111110 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_5
-0000011 1
-0000100 1
-0000101 1
-0000110 1
-0001010 1
-0001011 1
-0001100 1
-0010000 1
-0010001 1
-0010010 1
-0010111 1
-0011000 1
-0011001 1
-0011101 1
-0011110 1
-0011111 1
-0100011 1
-0100100 1
-0100101 1
-0100110 1
-0101010 1
-0101011 1
-0101100 1
-0110000 1
-0110001 1
-0110010 1
-0110111 1
-0111000 1
-0111001 1
-0111101 1
-0111110 1
-0111111 1
-1000011 1
-1000100 1
-1000101 1
-1000110 1
-1001010 1
-1001011 1
-1001100 1
-1010000 1
-1010001 1
-1010010 1
-1010111 1
-1011000 1
-1011001 1
-1011101 1
-1011110 1
-1011111 1
-1100011 1
-1100100 1
-1100101 1
-1100110 1
-1101010 1
-1101011 1
-1101100 1
-1110000 1
-1110001 1
-1110010 1
-1110111 1
-1111000 1
-1111001 1
-1111101 1
-1111110 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_6
-0000010 1
-0000101 1
-0000110 1
-0001000 1
-0001001 1
-0001011 1
-0001100 1
-0001111 1
-0010010 1
-0010101 1
-0010110 1
-0011000 1
-0011001 1
-0011011 1
-0011100 1
-0011111 1
-0100010 1
-0100101 1
-0100110 1
-0101000 1
-0101001 1
-0101011 1
-0101100 1
-0101111 1
-0110010 1
-0110101 1
-0110110 1
-0111000 1
-0111001 1
-0111011 1
-0111100 1
-0111111 1
-1000010 1
-1000101 1
-1000110 1
-1001000 1
-1001001 1
-1001011 1
-1001100 1
-1001111 1
-1010010 1
-1010101 1
-1010110 1
-1011000 1
-1011001 1
-1011011 1
-1011100 1
-1011111 1
-1100010 1
-1100101 1
-1100110 1
-1101000 1
-1101001 1
-1101011 1
-1101100 1
-1101111 1
-1110010 1
-1110101 1
-1110110 1
-1111000 1
-1111001 1
-1111011 1
-1111100 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_7
-0000001 1
-0000100 1
-0000110 1
-0000111 1
-0001001 1
-0001100 1
-0001110 1
-0001111 1
-0010001 1
-0010100 1
-0010110 1
-0010111 1
-0011001 1
-0011100 1
-0011110 1
-0011111 1
-0100001 1
-0100100 1
-0100110 1
-0100111 1
-0101001 1
-0101100 1
-0101110 1
-0101111 1
-0110001 1
-0110100 1
-0110110 1
-0110111 1
-0111001 1
-0111100 1
-0111110 1
-0111111 1
-1000001 1
-1000100 1
-1000110 1
-1000111 1
-1001001 1
-1001100 1
-1001110 1
-1001111 1
-1010001 1
-1010100 1
-1010110 1
-1010111 1
-1011001 1
-1011100 1
-1011110 1
-1011111 1
-1100001 1
-1100100 1
-1100110 1
-1100111 1
-1101001 1
-1101100 1
-1101110 1
-1101111 1
-1110001 1
-1110100 1
-1110110 1
-1110111 1
-1111001 1
-1111100 1
-1111110 1
-1111111 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_8
-0000001 1
-0000010 1
-0000101 1
-0000110 1
-0001001 1
-0001010 1
-0001101 1
-0001110 1
-0010001 1
-0010010 1
-0010101 1
-0010110 1
-0011001 1
-0011010 1
-0011101 1
-0011110 1
-0100001 1
-0100010 1
-0100101 1
-0100110 1
-0101001 1
-0101010 1
-0101101 1
-0101110 1
-0110001 1
-0110010 1
-0110101 1
-0110110 1
-0111001 1
-0111010 1
-0111101 1
-0111110 1
-1000001 1
-1000010 1
-1000101 1
-1000110 1
-1001001 1
-1001010 1
-1001101 1
-1001110 1
-1010001 1
-1010010 1
-1010101 1
-1010110 1
-1011001 1
-1011010 1
-1011101 1
-1011110 1
-1100001 1
-1100010 1
-1100101 1
-1100110 1
-1101001 1
-1101010 1
-1101101 1
-1101110 1
-1110001 1
-1110010 1
-1110101 1
-1110110 1
-1111001 1
-1111010 1
-1111101 1
-1111110 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 po_9
-0000000 1
-0000010 1
-0000100 1
-0000110 1
-0001000 1
-0001010 1
-0001100 1
-0001110 1
-0010000 1
-0010010 1
-0010100 1
-0010110 1
-0011000 1
-0011010 1
-0011100 1
-0011110 1
-0100000 1
-0100010 1
-0100100 1
-0100110 1
-0101000 1
-0101010 1
-0101100 1
-0101110 1
-0110000 1
-0110010 1
-0110100 1
-0110110 1
-0111000 1
-0111010 1
-0111100 1
-0111110 1
-1000000 1
-1000010 1
-1000100 1
-1000110 1
-1001000 1
-1001010 1
-1001100 1
-1001110 1
-1010000 1
-1010010 1
-1010100 1
-1010110 1
-1011000 1
-1011010 1
-1011100 1
-1011110 1
-1100000 1
-1100010 1
-1100100 1
-1100110 1
-1101000 1
-1101010 1
-1101100 1
-1101110 1
-1110000 1
-1110010 1
-1110100 1
-1110110 1
-1111000 1
-1111010 1
-1111100 1
-1111110 1
+.names pi_0 pi_1 pi_3 nand_term_1
+111 0
+.names pi_0 pi_1 pi_4 pi_5 nand_sub_2
+1111 0
+.names pi_0 pi_1 pi_2 nand_term_5
+111 0
+.names pi_0 inv_pi_0
+0 1
+.names pi_1 inv_pi_1
+0 1
+.names pi_2 inv_pi_2
+0 1
+.names pi_3 inv_pi_3
+0 1
+.names pi_5 inv_pi_5
+0 1
+.names pi_4 inv_pi_4
+0 1
+.names pi_6 inv_pi_6
+0 1
+.names pi_0 pi_2 pi_3 pi_5 nand_term_45
+1111 0
+.names pi_0 pi_1 pi_2 pi_4 nand_term_49
+1111 0
+.names pi_5 pi_6 nand_sub_56
+11 0
+.names pi_0 pi_1 pi_2 pi_3 nand_term_60
+1111 0
+.names pi_0 pi_2 pi_3 pi_4 nand_term_61
+1111 0
+.names pi_5 pi_6 nand_sub_68
+11 0
+.names pi_1 pi_2 pi_3 pi_5 nand_term_85
+1111 0
+.names pi_1 pi_2 pi_3 pi_4 nand_term_90
+1111 0
+.names pi_1 pi_3 pi_4 pi_6 nand_term_96
+1111 0
+.names pi_2 pi_3 pi_4 pi_5 nand_term_113
+1111 0
+.names pi_2 pi_4 pi_5 pi_6 nand_term_117
+1111 0
+.names pi_3 pi_5 pi_6 nand_term_127
+111 0
+.names pi_4 pi_5 nand_term_134
+11 0
+.names nand_sub_2 inv_sub_3
+0 1
+.names inv_pi_0 pi_1 pi_2 pi_5 nand_sub_6
+1111 0
+.names pi_0 inv_pi_1 nand_term_9
+11 0
+.names pi_0 inv_pi_2 inv_pi_3 inv_pi_5 nand_term_10
+1111 0
+.names inv_pi_0 pi_1 pi_2 pi_3 nand_term_11
+1111 0
+.names pi_0 inv_pi_2 inv_pi_3 inv_pi_4 nand_term_12
+1111 0
+.names inv_pi_0 pi_1 pi_2 pi_4 nand_term_13
+1111 0
+.names pi_0 inv_pi_2 inv_pi_3 inv_pi_6 nand_term_14
+1111 0
+.names inv_pi_0 pi_1 inv_pi_3 inv_pi_4 nand_sub_18
+1111 0
+.names pi_1 inv_pi_2 inv_pi_3 inv_pi_5 nand_term_21
+1111 0
+.names inv_pi_1 pi_2 pi_3 pi_5 nand_term_22
+1111 0
+.names inv_pi_1 pi_2 pi_3 pi_4 nand_term_23
+1111 0
+.names pi_0 inv_pi_1 pi_2 nand_term_24
+111 0
+.names pi_0 inv_pi_1 pi_3 pi_4 nand_sub_25
+1111 0
+.names pi_0 inv_pi_1 pi_3 pi_4 nand_sub_28
+1111 0
+.names inv_pi_0 pi_1 inv_pi_2 nand_term_31
+111 0
+.names pi_1 inv_pi_2 inv_pi_3 inv_pi_4 nand_term_32
+1111 0
+.names inv_pi_0 pi_1 inv_pi_3 inv_pi_4 nand_sub_33
+1111 0
+.names pi_1 inv_pi_2 inv_pi_3 inv_pi_6 nand_term_36
+1111 0
+.names inv_pi_0 pi_2 inv_pi_3 inv_pi_4 nand_sub_41
+1111 0
+.names pi_0 inv_pi_1 inv_pi_2 inv_pi_4 nand_term_44
+1111 0
+.names pi_0 inv_pi_1 inv_pi_2 inv_pi_5 nand_sub_46
+1111 0
+.names inv_pi_0 pi_1 inv_pi_2 pi_3 nand_term_50
+1111 0
+.names inv_pi_0 pi_2 inv_pi_3 inv_pi_4 nand_sub_51
+1111 0
+.names inv_pi_0 pi_1 inv_pi_2 pi_4 nand_sub_54
+1111 0
+.names nand_sub_56 inv_sub_57
+0 1
+.names inv_pi_0 inv_pi_1 pi_2 inv_pi_3 nand_term_59
+1111 0
+.names pi_0 inv_pi_1 inv_pi_2 inv_pi_3 nand_term_62
+1111 0
+.names inv_pi_0 inv_pi_2 pi_3 pi_4 nand_sub_63
+1111 0
+.names pi_0 pi_1 inv_pi_3 inv_pi_4 nand_sub_66
+1111 0
+.names nand_sub_68 inv_sub_69
+0 1
+.names inv_pi_0 inv_pi_2 pi_3 pi_4 nand_sub_71
+1111 0
+.names inv_pi_0 inv_pi_1 pi_2 inv_pi_4 nand_sub_74
+1111 0
+.names inv_pi_1 pi_2 inv_pi_3 pi_5 nand_sub_86
+1111 0
+.names pi_1 inv_pi_3 inv_pi_4 inv_pi_5 nand_term_89
+1111 0
+.names inv_pi_1 inv_pi_2 pi_3 inv_pi_4 nand_term_91
+1111 0
+.names inv_pi_1 inv_pi_2 pi_3 inv_pi_5 nand_sub_92
+1111 0
+.names inv_pi_1 pi_3 inv_pi_4 inv_pi_5 nand_term_95
+1111 0
+.names pi_1 inv_pi_2 pi_4 pi_5 nand_sub_97
+1111 0
+.names inv_pi_1 inv_pi_3 pi_4 pi_5 nand_sub_100
+1111 0
+.names pi_1 inv_pi_3 inv_pi_4 inv_pi_6 nand_term_103
+1111 0
+.names inv_pi_1 pi_2 inv_pi_3 pi_4 nand_term_104
+1111 0
+.names pi_2 pi_3 inv_pi_5 pi_6 nand_term_110
+1111 0
+.names pi_2 inv_pi_3 inv_pi_4 inv_pi_6 nand_term_111
+1111 0
+.names inv_pi_2 inv_pi_3 pi_4 inv_pi_6 nand_term_112
+1111 0
+.names inv_pi_2 inv_pi_3 pi_4 inv_pi_5 nand_term_114
+1111 0
+.names inv_pi_2 pi_3 inv_pi_4 pi_5 nand_term_115
+1111 0
+.names inv_pi_2 pi_4 inv_pi_5 inv_pi_6 nand_term_116
+1111 0
+.names pi_2 inv_pi_4 inv_pi_5 nand_term_118
+111 0
+.names inv_pi_2 inv_pi_4 pi_5 pi_6 nand_term_119
+1111 0
+.names inv_pi_3 pi_5 inv_pi_6 nand_term_124
+111 0
+.names inv_pi_3 pi_4 inv_pi_5 pi_6 nand_term_125
+1111 0
+.names pi_3 inv_pi_4 pi_6 nand_term_126
+111 0
+.names pi_3 inv_pi_5 inv_pi_6 nand_term_128
+111 0
+.names pi_4 inv_pi_6 nand_term_132
+11 0
+.names inv_pi_4 inv_pi_5 pi_6 nand_term_133
+111 0
+.names inv_pi_5 pi_6 nand_term_135
+11 0
+.names pi_5 inv_pi_6 nand_term_136
+11 0
+.names inv_pi_6 inv_term_136
+0 1
+.names inv_sub_3 pi_6 nand_term_4
+11 0
+.names nand_sub_6 inv_sub_7
+0 1
+.names nand_term_12 nand_term_13 nand_term_14 sub_or_16
+111 0
+.names nand_sub_18 inv_sub_19
+0 1
+.names nand_sub_25 inv_sub_26
+0 1
+.names nand_sub_28 inv_sub_29
+0 1
+.names nand_sub_33 inv_sub_34
+0 1
+.names nand_sub_41 inv_sub_42
+0 1
+.names nand_sub_46 inv_sub_47
+0 1
+.names nand_sub_51 inv_sub_52
+0 1
+.names nand_sub_54 inv_sub_55
+0 1
+.names nand_sub_63 inv_sub_64
+0 1
+.names nand_sub_66 inv_sub_67
+0 1
+.names nand_sub_71 inv_sub_72
+0 1
+.names nand_sub_74 inv_sub_75
+0 1
+.names nand_sub_86 inv_sub_87
+0 1
+.names nand_sub_92 inv_sub_93
+0 1
+.names nand_sub_97 inv_sub_98
+0 1
+.names nand_sub_100 inv_sub_101
+0 1
+.names nand_term_103 nand_term_104 sub_or_108
+11 0
+.names nand_term_110 nand_term_111 nand_term_112 nand_term_113 sub_or_120
+1111 0
+.names nand_term_114 nand_term_115 nand_term_116 nand_term_117 sub_or_121
+1111 0
+.names nand_term_118 nand_term_119 sub_or_122
+11 0
+.names nand_term_124 nand_term_125 nand_term_126 nand_term_127 sub_or_129
+1111 0
+.names nand_term_128 sub_or_130
+1 0
+.names nand_term_132 nand_term_133 nand_term_134 po_7
+111 0
+.names nand_term_135 nand_term_136 po_8
+11 0
+.names inv_term_136 po_9
+0 1
+.names nand_term_1 nand_term_4 nand_term_5 po_0
+111 0
+.names inv_sub_7 pi_6 nand_term_8
+11 0
+.names inv_sub_19 inv_pi_5 nand_term_20
+11 0
+.names inv_sub_26 pi_5 nand_term_27
+11 0
+.names inv_sub_29 pi_6 nand_term_30
+11 0
+.names inv_sub_34 inv_pi_6 nand_term_35
+11 0
+.names inv_sub_42 inv_pi_6 nand_term_43
+11 0
+.names inv_sub_47 inv_pi_6 nand_term_48
+11 0
+.names inv_sub_52 inv_pi_5 nand_term_53
+11 0
+.names inv_sub_55 inv_sub_57 nand_term_58
+11 0
+.names inv_sub_64 pi_5 nand_term_65
+11 0
+.names inv_sub_67 inv_sub_69 nand_term_70
+11 0
+.names inv_sub_72 pi_6 nand_term_73
+11 0
+.names inv_sub_75 inv_pi_5 nand_term_76
+11 0
+.names inv_sub_87 pi_6 nand_term_88
+11 0
+.names inv_sub_93 inv_pi_6 nand_term_94
+11 0
+.names inv_sub_98 inv_pi_6 nand_term_99
+11 0
+.names inv_sub_101 pi_6 nand_term_102
+11 0
+.names sub_or_120 sub_or_121 sub_or_122 nor_123
+1-- 0
+-1- 0
+--1 0
+.names sub_or_129 sub_or_130 nor_131
+1- 0
+-1 0
+.names nand_term_8 nand_term_9 nand_term_10 nand_term_11 sub_or_15
+1111 0
+.names nand_term_20 nand_term_21 nand_term_22 nand_term_23 sub_or_37
+1111 0
+.names nand_term_24 nand_term_27 nand_term_30 nand_term_31 sub_or_38
+1111 0
+.names nand_term_32 nand_term_35 nand_term_36 sub_or_39
+111 0
+.names nand_term_14 nand_term_43 nand_term_44 nand_term_45 sub_or_77
+1111 0
+.names nand_term_48 nand_term_49 nand_term_50 nand_term_53 sub_or_78
+1111 0
+.names nand_term_58 nand_term_59 nand_term_60 nand_term_10 sub_or_79
+1111 0
+.names nand_term_61 nand_term_62 nand_term_65 nand_term_70 sub_or_80
+1111 0
+.names nand_term_73 nand_term_76 sub_or_81
+11 0
+.names nand_term_85 nand_term_88 nand_term_21 nand_term_89 sub_or_105
+1111 0
+.names nand_term_90 nand_term_91 nand_term_32 nand_term_94 sub_or_106
+1111 0
+.names nand_term_95 nand_term_96 nand_term_99 nand_term_102 sub_or_107
+1111 0
+.names nor_123 po_5
+0 1
+.names nor_131 po_6
+0 1
+.names sub_or_15 sub_or_16 nor_17
+1- 0
+-1 0
+.names sub_or_37 sub_or_38 sub_or_39 nor_40
+1-- 0
+-1- 0
+--1 0
+.names sub_or_77 sub_or_78 sub_or_79 sub_or_80 nor_sub_82
+1--- 0
+-1-- 0
+--1- 0
+---1 0
+.names sub_or_105 sub_or_106 sub_or_107 sub_or_108 nor_109
+1--- 0
+-1-- 0
+--1- 0
+---1 0
+.names nor_17 po_1
+0 1
+.names nor_40 po_2
+0 1
+.names nor_sub_82 inv_tree_83
+0 1
+.names nor_109 po_4
+0 1
+.names inv_tree_83 sub_or_81 nor_84
+1- 0
+-1 0
+.names nor_84 po_3
+0 1
 .end

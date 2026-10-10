@@ -1,43 +1,117 @@
 .model misex1
-.inputs pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7
-.outputs po_0 po_1 po_2 po_3 po_4 po_5 po_6
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_0
-0111---- 1
-1010---- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_1
-010----- 1
-0011---- 1
-1001---- 1
-001--1-- 1
-0-00--1- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_2
-01-1---- 1
-1001---- 1
-010-1--- 1
-0010-0-- 1
-0000--0- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_3
-1010---- 1
--010-0-- 1
-010----0 1
-01000--- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_4
-010----- 1
-0-11---- 1
--010---- 1
-0-00---- 1
-1001---- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_5
-010----- 1
-0-11---- 1
-1001---- 1
-1010---- 1
-001--1-- 1
-0-00--1- 1
-.names pi_0 pi_1 pi_2 pi_3 pi_4 pi_5 pi_6 pi_7 po_6
-01-1---- 1
-1001---- 1
-1010---- 1
-010-0--- 1
--010-0-- 1
+.inputs dmpst3 dmpst2 dmpst1 dmpst0 xskip yskip page rmwB
+.outputs dmnst3B dmnst2B dmnst1B dmnst0B adctlp2B adctlp1B adctlp0B
+.names dmpst3 inv_dmpst3
+0 1
+.names dmpst2 inv_dmpst2
+0 1
+.names dmpst0 inv_dmpst0
+0 1
+.names dmpst1 inv_dmpst1
+0 1
+.names yskip inv_yskip
+0 1
+.names page inv_page
+0 1
+.names xskip inv_xskip
+0 1
+.names rmwB inv_rmwB
+0 1
+.names inv_dmpst3 dmpst2 dmpst1 dmpst0 nand_term_1
+1111 0
+.names dmpst3 inv_dmpst2 dmpst1 inv_dmpst0 nand_term_2
+1111 0
+.names inv_dmpst3 inv_dmpst2 dmpst1 dmpst0 nand_term_3
+1111 0
+.names inv_dmpst3 dmpst2 inv_dmpst1 nand_term_4
+111 0
+.names inv_dmpst3 inv_dmpst1 inv_dmpst0 page nand_term_5
+1111 0
+.names dmpst3 inv_dmpst2 inv_dmpst1 dmpst0 nand_term_6
+1111 0
+.names inv_dmpst3 inv_dmpst2 dmpst1 yskip nand_term_7
+1111 0
+.names inv_dmpst3 inv_dmpst2 dmpst1 inv_dmpst0 nand_sub_11
+1111 0
+.names inv_dmpst3 inv_dmpst2 inv_dmpst1 inv_dmpst0 nand_sub_14
+1111 0
+.names inv_dmpst3 dmpst2 dmpst0 nand_term_17
+111 0
+.names inv_dmpst3 dmpst2 inv_dmpst1 xskip nand_term_18
+1111 0
+.names inv_dmpst2 dmpst1 inv_dmpst0 inv_yskip nand_term_22
+1111 0
+.names inv_dmpst3 dmpst2 inv_dmpst1 inv_dmpst0 nand_sub_23
+1111 0
+.names inv_dmpst3 dmpst2 inv_dmpst1 inv_rmwB nand_term_26
+1111 0
+.names inv_dmpst2 dmpst1 inv_dmpst0 nand_term_27
+111 0
+.names inv_dmpst3 dmpst1 dmpst0 nand_term_28
+111 0
+.names inv_dmpst3 inv_dmpst2 inv_dmpst0 nand_term_29
+111 0
+.names inv_dmpst3 dmpst2 inv_dmpst1 inv_xskip nand_term_36
+1111 0
+.names nand_term_1 nand_term_2 dmnst3B
+11 0
+.names nand_term_3 nand_term_4 nand_term_5 nand_term_6 sub_or_8
+1111 0
+.names nand_term_7 sub_or_9
+1 0
+.names nand_sub_11 inv_sub_12
+0 1
+.names nand_sub_14 inv_sub_15
+0 1
+.names nand_term_18 sub_or_20
+1 0
+.names nand_sub_23 inv_sub_24
+0 1
+.names nand_term_4 nand_term_6 nand_term_27 nand_term_28 sub_or_30
+1111 0
+.names nand_term_29 sub_or_31
+1 0
+.names nand_term_4 nand_term_5 nand_term_6 nand_term_2 sub_or_33
+1111 0
+.names nand_term_28 nand_term_7 sub_or_34
+11 0
+.names nand_term_36 nand_term_17 nand_term_6 nand_term_2 sub_or_37
+1111 0
+.names nand_term_22 sub_or_38
+1 0
+.names sub_or_8 sub_or_9 nor_10
+1- 0
+-1 0
+.names inv_sub_12 inv_yskip nand_term_13
+11 0
+.names inv_sub_15 inv_page nand_term_16
+11 0
+.names inv_sub_24 inv_xskip nand_term_25
+11 0
+.names sub_or_30 sub_or_31 nor_32
+1- 0
+-1 0
+.names sub_or_33 sub_or_34 nor_35
+1- 0
+-1 0
+.names sub_or_37 sub_or_38 nor_39
+1- 0
+-1 0
+.names nor_10 dmnst2B
+0 1
+.names nand_term_13 nand_term_6 nand_term_16 nand_term_17 sub_or_19
+1111 0
+.names nand_term_22 nand_term_2 nand_term_25 nand_term_26 dmnst0B
+1111 0
+.names nor_32 adctlp2B
+0 1
+.names nor_35 adctlp1B
+0 1
+.names nor_39 adctlp0B
+0 1
+.names sub_or_19 sub_or_20 nor_21
+1- 0
+-1 0
+.names nor_21 dmnst1B
+0 1
 .end
