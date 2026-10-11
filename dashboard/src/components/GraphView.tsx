@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   ReactFlow,
   useNodesState,
@@ -28,11 +28,12 @@ interface GraphViewProps {
 export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphViewProps) {
   const [nodes, setNodes, onNodesChange] = useNodesState<Node>([]);
   const [edges, setEdges, onEdgesChange] = useEdgesState<Edge>([]);
+  const layoutedNodesRef = useRef<Node[]>([]);
 
+  // 1. Run layout ONLY when graphData changes (not when toggling baseline/postFRW)
   useEffect(() => {
     if (!graphData || !graphData.nodes || !graphData.edges) return;
 
-    // Map JSON nodes to React Flow nodes
     const initialNodes = graphData.nodes.map((n: any) => ({
       id: n.id,
       type: 'logicGate',
@@ -40,12 +41,53 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
       data: { ...n, isPostFRW },
     }));
 
-    // Map JSON edges to React Flow edges
-    const initialEdges = graphData.edges
+    // Generate all edges for layout
+    const allEdges = graphData.edges.map((e: any) => ({
+      id: e.id,
+      source: e.source,
+      target: e.target,
+      is_frw: e.is_frw,
+      is_removed: e.is_removed,
+    }));
+
+    const { nodes: layoutedNodes } = getLayoutedElements(
+      initialNodes,
+      allEdges as any,
+      'LR'
+    );
+
+    layoutedNodesRef.current = layoutedNodes;
+
+    // Filter nodes: in pre-FRW (baseline), vanish inverters/gates that were added only post-FRW
+    const visibleNodes = layoutedNodes
+      .filter((n: any) => isPostFRW || n.data.baseline !== null)
+      .map((n: any) => ({
+        ...n,
+        data: { ...n.data, isPostFRW },
+      }));
+
+    setNodes(visibleNodes as any);
+  }, [graphData, setNodes]);
+
+  // 2. Fast edge filter and node visibility update when isPostFRW toggles
+  useEffect(() => {
+    if (!graphData || !graphData.edges) return;
+
+    if (layoutedNodesRef.current && layoutedNodesRef.current.length > 0) {
+      // In baseline, vanish gates that only exist post-FRW
+      const visibleNodes = layoutedNodesRef.current
+        .filter((n: any) => isPostFRW || n.data.baseline !== null)
+        .map((n: any) => ({
+          ...n,
+          data: { ...n.data, isPostFRW },
+        }));
+
+      setNodes(visibleNodes as any);
+    }
+
+    const activeEdges = graphData.edges
       .filter((e: any) => {
-        // If we are in baseline, hide FRW edges
         if (!isPostFRW && e.is_frw) return false;
-        // If we are in post_frw, hide removed edges
         if (isPostFRW && e.is_removed) return false;
         return true;
       })
@@ -55,38 +97,24 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
           id: e.id,
           source: e.source,
           target: e.target,
+          type: 'straight',
           animated: isFrwEdge,
           style: isFrwEdge 
-            ? { stroke: '#2196f3', strokeWidth: 3, strokeDasharray: '5,5' }
-            : { stroke: '#999', strokeWidth: 2 },
+            ? { stroke: '#2196f3', strokeWidth: 2.5, strokeDasharray: '5,5' }
+            : { stroke: '#94a3b8', strokeWidth: 1.5 },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: isFrwEdge ? '#2196f3' : '#999',
+            color: isFrwEdge ? '#2196f3' : '#94a3b8',
+            width: 15,
+            height: 15,
           },
         };
       });
 
-    // Apply layout
-    const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
-      initialNodes,
-      initialEdges,
-      'LR'
-    );
+    setEdges(activeEdges);
+  }, [isPostFRW, graphData, setNodes, setEdges]);
 
-    setNodes(layoutedNodes as any);
-    setEdges(layoutedEdges as any);
-  }, [graphData, isPostFRW, setNodes, setEdges]);
-
-  // When isPostFRW changes, we just need to update the data inside the nodes 
-  // so the LogicGateNode component rerenders its colors, and re-filter edges.
-  useEffect(() => {
-    setNodes((nds: any[]) =>
-      nds.map((n) => ({
-        ...n,
-        data: { ...n.data, isPostFRW },
-      }))
-    );
-  }, [isPostFRW, setNodes]);
+  const showMiniMap = nodes.length <= 400;
 
   return (
     <div style={{ width: '100%', height: '100%' }}>
@@ -98,12 +126,14 @@ export default function GraphView({ graphData, isPostFRW, onNodeClick }: GraphVi
         onNodeClick={(_, node: any) => onNodeClick(node.data)}
         nodeTypes={nodeTypes}
         fitView
+        onlyRenderVisibleElements={true}
         attributionPosition="top-right"
+        minZoom={0.05}
+        maxZoom={2}
       >
-
-        <Background color="#ccc" gap={16} />
+        <Background color="#cbd5e1" gap={20} size={1} />
         <Controls />
-        <MiniMap zoomable pannable />
+        {showMiniMap && <MiniMap zoomable pannable nodeStrokeWidth={2} />}
       </ReactFlow>
     </div>
   );

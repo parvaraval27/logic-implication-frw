@@ -17,7 +17,7 @@ export default function PropertiesPanel({
 }: PropertiesPanelProps) {
   const currentMetrics = isPostFRW ? metrics?.post_frw : metrics?.baseline;
   const [frwExpanded, setFrwExpanded] = useState(false);
-  const frwEdges = (edges || []).filter((e: any) => e.is_frw);
+  const frwEdges = (edges || []).filter((e: any) => e.is_frw && !e.target.startsWith('INV_'));
 
   return (
     <aside className="properties-panel">
@@ -48,7 +48,7 @@ export default function PropertiesPanel({
             <div className="metric-card highlight">
               <span className="metric-label">Silicon Area</span>
               <span className="metric-value" title={`${currentMetrics.area?.toLocaleString()} nm (PTM 130nm)`}>
-                {currentMetrics.area ? `${(currentMetrics.area / 1000).toFixed(1)}k nm` : '-'}
+                {currentMetrics.area ? `${(currentMetrics.area / 1000).toFixed(2)} µm` : '-'}
               </span>
             </div>
             <div className="metric-card">
