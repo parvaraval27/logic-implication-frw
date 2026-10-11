@@ -4,91 +4,42 @@
       "pi_count": 3,
       "po_count": 2,
       "gate_count": 9,
+      "transistors": 36,
       "area": 9360,
-      "avg_pdet": 0.4185714285714286,
-      "failure_rate": 0.4185714285714286,
-      "reliability": 0.5814285714285714
+      "avg_pdet": 0.4195863471971067,
+      "failure_rate": 0.4195863471971067,
+      "reliability": 0.5804136528028934
     },
     "post_frw": {
       "pi_count": 3,
       "po_count": 2,
       "gate_count": 9,
+      "transistors": 36,
       "frw_added": 0,
       "area": 9360,
       "area_overhead": 0.0,
-      "avg_pdet": 0.4185714285714286,
-      "failure_rate": 0.4185714285714286,
-      "reliability": 0.5814285714285714,
+      "avg_pdet": 0.4195863471971067,
+      "failure_rate": 0.4195863471971067,
+      "reliability": 0.5804136528028934,
       "fr_reduction": 0.0
     }
   },
   "nodes": [
     {
-      "id": "Cout",
-      "type": "NAND",
-      "role": "PO",
-      "baseline": {
-        "Pdet_sa0": 0.4,
-        "Pdet_sa1": 0.6,
-        "P0": 0.6,
-        "P1": 0.4
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.4,
-        "Pdet_sa1": 0.6,
-        "P0": 0.6,
-        "P1": 0.4
-      }
-    },
-    {
       "id": "N7",
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
+        "Pdet_sa0": 0.5021756329113924,
+        "Pdet_sa1": 0.2488132911392405,
+        "P0": 0.24881329113924056,
+        "P1": 0.7511867088607594
       },
       "post_frw": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
-      }
-    },
-    {
-      "id": "B",
-      "type": "PI",
-      "role": "PI",
-      "baseline": {
-        "Pdet_sa0": 0.52,
-        "Pdet_sa1": 0.48,
-        "P0": 0.48,
-        "P1": 0.52
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.52,
-        "Pdet_sa1": 0.48,
-        "P0": 0.48,
-        "P1": 0.52
-      }
-    },
-    {
-      "id": "N1",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.76,
-        "Pdet_sa1": 0.24,
-        "P0": 0.24,
-        "P1": 0.76
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.76,
-        "Pdet_sa1": 0.24,
-        "P0": 0.24,
-        "P1": 0.76
+        "Pdet_sa0": 0.5021756329113924,
+        "Pdet_sa1": 0.2488132911392405,
+        "P0": 0.24881329113924056,
+        "P1": 0.7511867088607594
       }
     },
     {
@@ -96,118 +47,16 @@
       "type": "NAND",
       "role": "PO",
       "baseline": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.44,
-        "P0": 0.43999999999999995,
-        "P1": 0.56
+        "Pdet_sa0": 0.4978243670886076,
+        "Pdet_sa1": 0.5021756329113924,
+        "P0": 0.5021756329113924,
+        "P1": 0.4978243670886076
       },
       "post_frw": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.44,
-        "P0": 0.43999999999999995,
-        "P1": 0.56
-      }
-    },
-    {
-      "id": "N4",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.56,
-        "P0": 0.56,
-        "P1": 0.44
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.56,
-        "P0": 0.56,
-        "P1": 0.44
-      }
-    },
-    {
-      "id": "N3",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
-      }
-    },
-    {
-      "id": "A",
-      "type": "PI",
-      "role": "PI",
-      "baseline": {
-        "Pdet_sa0": 0.4,
-        "Pdet_sa1": 0.6,
-        "P0": 0.6,
-        "P1": 0.4
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.4,
-        "Pdet_sa1": 0.6,
-        "P0": 0.6,
-        "P1": 0.4
-      }
-    },
-    {
-      "id": "N2",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.16,
-        "P0": 0.16000000000000003,
-        "P1": 0.84
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.56,
-        "Pdet_sa1": 0.16,
-        "P0": 0.16000000000000003,
-        "P1": 0.84
-      }
-    },
-    {
-      "id": "N5",
-      "type": "NAND",
-      "role": "INTERNAL",
-      "baseline": {
-        "Pdet_sa0": 0.7,
-        "Pdet_sa1": 0.16,
-        "P0": 0.16000000000000003,
-        "P1": 0.84
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.7,
-        "Pdet_sa1": 0.16,
-        "P0": 0.16000000000000003,
-        "P1": 0.84
-      }
-    },
-    {
-      "id": "Cin",
-      "type": "PI",
-      "role": "PI",
-      "baseline": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.56,
-        "P0": 0.56,
-        "P1": 0.44
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.56,
-        "P0": 0.56,
-        "P1": 0.44
+        "Pdet_sa0": 0.4978243670886076,
+        "Pdet_sa1": 0.5021756329113924,
+        "P0": 0.5021756329113924,
+        "P1": 0.4978243670886076
       }
     },
     {
@@ -215,87 +64,177 @@
       "type": "NAND",
       "role": "INTERNAL",
       "baseline": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
+        "Pdet_sa0": 0.5021756329113924,
+        "Pdet_sa1": 0.24901107594936708,
+        "P0": 0.2490110759493671,
+        "P1": 0.7509889240506329
       },
       "post_frw": {
-        "Pdet_sa0": 0.44,
-        "Pdet_sa1": 0.28,
-        "P0": 0.28,
-        "P1": 0.72
+        "Pdet_sa0": 0.5021756329113924,
+        "Pdet_sa1": 0.24901107594936708,
+        "P0": 0.2490110759493671,
+        "P1": 0.7509889240506329
+      }
+    },
+    {
+      "id": "Cout",
+      "type": "NAND",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.5043512658227848,
+        "Pdet_sa1": 0.49564873417721517,
+        "P0": 0.4956487341772152,
+        "P1": 0.5043512658227848
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.5043512658227848,
+        "Pdet_sa1": 0.49564873417721517,
+        "P0": 0.4956487341772152,
+        "P1": 0.5043512658227848
+      }
+    },
+    {
+      "id": "N4",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.49980221518987344,
+        "Pdet_sa1": 0.5001977848101266,
+        "P0": 0.5001977848101266,
+        "P1": 0.49980221518987344
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.49980221518987344,
+        "Pdet_sa1": 0.5001977848101266,
+        "P0": 0.5001977848101266,
+        "P1": 0.49980221518987344
+      }
+    },
+    {
+      "id": "B",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.4970332278481013,
+        "Pdet_sa1": 0.5029667721518988,
+        "P0": 0.5029667721518987,
+        "P1": 0.4970332278481013
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.4970332278481013,
+        "Pdet_sa1": 0.5029667721518988,
+        "P0": 0.5029667721518987,
+        "P1": 0.4970332278481013
+      }
+    },
+    {
+      "id": "A",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.5098892405063291,
+        "Pdet_sa1": 0.4901107594936709,
+        "P0": 0.4901107594936709,
+        "P1": 0.5098892405063291
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.5098892405063291,
+        "Pdet_sa1": 0.4901107594936709,
+        "P0": 0.4901107594936709,
+        "P1": 0.5098892405063291
+      }
+    },
+    {
+      "id": "N3",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.5001977848101266,
+        "Pdet_sa1": 0.24347310126582278,
+        "P0": 0.24347310126582278,
+        "P1": 0.7565268987341772
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.5001977848101266,
+        "Pdet_sa1": 0.24347310126582278,
+        "P0": 0.24347310126582278,
+        "P1": 0.7565268987341772
+      }
+    },
+    {
+      "id": "N5",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.6210443037974683,
+        "Pdet_sa1": 0.25079113924050633,
+        "P0": 0.25079113924050633,
+        "P1": 0.7492088607594937
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.6210443037974683,
+        "Pdet_sa1": 0.25079113924050633,
+        "P0": 0.25079113924050633,
+        "P1": 0.7492088607594937
+      }
+    },
+    {
+      "id": "Cin",
+      "type": "PI",
+      "role": "PI",
+      "baseline": {
+        "Pdet_sa0": 0.49960443037974683,
+        "Pdet_sa1": 0.5003955696202531,
+        "P0": 0.5003955696202531,
+        "P1": 0.49960443037974683
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.49960443037974683,
+        "Pdet_sa1": 0.5003955696202531,
+        "P0": 0.5003955696202531,
+        "P1": 0.49960443037974683
+      }
+    },
+    {
+      "id": "N2",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.5001977848101266,
+        "Pdet_sa1": 0.2563291139240506,
+        "P0": 0.25632911392405067,
+        "P1": 0.7436708860759493
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.5001977848101266,
+        "Pdet_sa1": 0.2563291139240506,
+        "P0": 0.25632911392405067,
+        "P1": 0.7436708860759493
+      }
+    },
+    {
+      "id": "N1",
+      "type": "NAND",
+      "role": "INTERNAL",
+      "baseline": {
+        "Pdet_sa0": 0.7464398734177216,
+        "Pdet_sa1": 0.2535601265822785,
+        "P0": 0.25356012658227844,
+        "P1": 0.7464398734177216
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.7464398734177216,
+        "Pdet_sa1": 0.2535601265822785,
+        "P0": 0.25356012658227844,
+        "P1": 0.7464398734177216
       }
     }
   ],
   "edges": [
     {
-      "id": "edge-N2-N4-base",
-      "source": "N2",
-      "target": "N4",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N5-N6-base",
-      "source": "N5",
-      "target": "N6",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-A-N2-base",
-      "source": "A",
-      "target": "N2",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N1-N3-base",
-      "source": "N1",
-      "target": "N3",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-B-N1-base",
-      "source": "B",
-      "target": "N1",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-B-N3-base",
-      "source": "B",
-      "target": "N3",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
       "id": "edge-A-N1-base",
       "source": "A",
       "target": "N1",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N3-N4-base",
-      "source": "N3",
-      "target": "N4",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N1-Cout-base",
-      "source": "N1",
-      "target": "Cout",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N4-N6-base",
-      "source": "N4",
-      "target": "N6",
       "is_frw": false,
       "is_removed": false
     },
@@ -307,37 +246,30 @@
       "is_removed": false
     },
     {
-      "id": "edge-N5-Cout-base",
-      "source": "N5",
+      "id": "edge-N4-N6-base",
+      "source": "N4",
+      "target": "N6",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N1-Cout-base",
+      "source": "N1",
       "target": "Cout",
       "is_frw": false,
       "is_removed": false
     },
     {
-      "id": "edge-N4-N5-base",
-      "source": "N4",
-      "target": "N5",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N1-N2-base",
+      "id": "edge-N1-N3-base",
       "source": "N1",
-      "target": "N2",
+      "target": "N3",
       "is_frw": false,
       "is_removed": false
     },
     {
-      "id": "edge-Cin-N5-base",
-      "source": "Cin",
-      "target": "N5",
-      "is_frw": false,
-      "is_removed": false
-    },
-    {
-      "id": "edge-N6-Sum-base",
-      "source": "N6",
-      "target": "Sum",
+      "id": "edge-N5-N6-base",
+      "source": "N5",
+      "target": "N6",
       "is_frw": false,
       "is_removed": false
     },
@@ -349,9 +281,79 @@
       "is_removed": false
     },
     {
+      "id": "edge-N5-Cout-base",
+      "source": "N5",
+      "target": "Cout",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N3-N4-base",
+      "source": "N3",
+      "target": "N4",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-A-N2-base",
+      "source": "A",
+      "target": "N2",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N1-N2-base",
+      "source": "N1",
+      "target": "N2",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N2-N4-base",
+      "source": "N2",
+      "target": "N4",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-Cin-N5-base",
+      "source": "Cin",
+      "target": "N5",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N4-N5-base",
+      "source": "N4",
+      "target": "N5",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-B-N1-base",
+      "source": "B",
+      "target": "N1",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-N6-Sum-base",
+      "source": "N6",
+      "target": "Sum",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
       "id": "edge-Cin-N7-base",
       "source": "Cin",
       "target": "N7",
+      "is_frw": false,
+      "is_removed": false
+    },
+    {
+      "id": "edge-B-N3-base",
+      "source": "B",
+      "target": "N3",
       "is_frw": false,
       "is_removed": false
     }

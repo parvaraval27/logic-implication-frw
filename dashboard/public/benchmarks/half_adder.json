@@ -4,6 +4,7 @@
       "pi_count": 2,
       "po_count": 2,
       "gate_count": 2,
+      "transistors": 14,
       "area": 2990.0,
       "avg_pdet": 0,
       "failure_rate": 0,
@@ -13,6 +14,7 @@
       "pi_count": 2,
       "po_count": 2,
       "gate_count": 2,
+      "transistors": 14,
       "frw_added": 0,
       "area": 2990.0,
       "area_overhead": 0.0,
@@ -24,54 +26,37 @@
   },
   "nodes": [
     {
-      "id": "carry",
-      "type": "AND",
-      "role": "PO",
-      "baseline": {
-        "Pdet_sa0": 0.2,
-        "Pdet_sa1": 0.8,
-        "P0": 0.8,
-        "P1": 0.2
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.2,
-        "Pdet_sa1": 0.8,
-        "P0": 0.8,
-        "P1": 0.2
-      }
-    },
-    {
-      "id": "sum",
-      "type": "XOR",
-      "role": "PO",
-      "baseline": {
-        "Pdet_sa0": 0.48,
-        "Pdet_sa1": 0.52,
-        "P0": 0.52,
-        "P1": 0.48
-      },
-      "post_frw": {
-        "Pdet_sa0": 0.48,
-        "Pdet_sa1": 0.52,
-        "P0": 0.52,
-        "P1": 0.48
-      }
-    },
-    {
       "id": "a",
       "type": "PI",
       "role": "PI",
       "baseline": {
-        "Pdet_sa0": 0.5,
-        "Pdet_sa1": 0.5,
-        "P0": 0.5,
-        "P1": 0.5
+        "Pdet_sa0": 0.5096914556962026,
+        "Pdet_sa1": 0.49030854430379744,
+        "P0": 0.49030854430379744,
+        "P1": 0.5096914556962026
       },
       "post_frw": {
-        "Pdet_sa0": 0.5,
-        "Pdet_sa1": 0.5,
-        "P0": 0.5,
-        "P1": 0.5
+        "Pdet_sa0": 0.5096914556962026,
+        "Pdet_sa1": 0.49030854430379744,
+        "P0": 0.49030854430379744,
+        "P1": 0.5096914556962026
+      }
+    },
+    {
+      "id": "carry",
+      "type": "AND",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.25593354430379744,
+        "Pdet_sa1": 0.7440664556962026,
+        "P0": 0.7440664556962026,
+        "P1": 0.25593354430379744
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.25593354430379744,
+        "Pdet_sa1": 0.7440664556962026,
+        "P0": 0.7440664556962026,
+        "P1": 0.25593354430379744
       }
     },
     {
@@ -79,24 +64,41 @@
       "type": "PI",
       "role": "PI",
       "baseline": {
-        "Pdet_sa0": 0.38,
-        "Pdet_sa1": 0.62,
-        "P0": 0.62,
-        "P1": 0.38
+        "Pdet_sa0": 0.49802215189873417,
+        "Pdet_sa1": 0.5019778481012658,
+        "P0": 0.5019778481012658,
+        "P1": 0.49802215189873417
       },
       "post_frw": {
-        "Pdet_sa0": 0.38,
-        "Pdet_sa1": 0.62,
-        "P0": 0.62,
-        "P1": 0.38
+        "Pdet_sa0": 0.49802215189873417,
+        "Pdet_sa1": 0.5019778481012658,
+        "P0": 0.5019778481012658,
+        "P1": 0.49802215189873417
+      }
+    },
+    {
+      "id": "sum",
+      "type": "XOR",
+      "role": "PO",
+      "baseline": {
+        "Pdet_sa0": 0.4958465189873418,
+        "Pdet_sa1": 0.5041534810126582,
+        "P0": 0.5041534810126582,
+        "P1": 0.4958465189873418
+      },
+      "post_frw": {
+        "Pdet_sa0": 0.4958465189873418,
+        "Pdet_sa1": 0.5041534810126582,
+        "P0": 0.5041534810126582,
+        "P1": 0.4958465189873418
       }
     }
   ],
   "edges": [
     {
-      "id": "edge-b-sum-base",
-      "source": "b",
-      "target": "sum",
+      "id": "edge-a-carry-base",
+      "source": "a",
+      "target": "carry",
       "is_frw": false,
       "is_removed": false
     },
@@ -108,15 +110,15 @@
       "is_removed": false
     },
     {
-      "id": "edge-b-carry-base",
+      "id": "edge-b-sum-base",
       "source": "b",
-      "target": "carry",
+      "target": "sum",
       "is_frw": false,
       "is_removed": false
     },
     {
-      "id": "edge-a-carry-base",
-      "source": "a",
+      "id": "edge-b-carry-base",
+      "source": "b",
       "target": "carry",
       "is_frw": false,
       "is_removed": false
